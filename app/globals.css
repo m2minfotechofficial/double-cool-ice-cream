@@ -5,11 +5,17 @@
   --foreground: #171717;
 }
 
+@theme{
+  --font-dm-sans: var(--font-dm-sans);
+  --font-bayon: var(--font-bayon);
+  --font-baloo2: var(--font-baloo2);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-dm-sans: var(--font-dm-sans);
+  --font-bayon: var(--font-bayon);
 }
 
 @media (prefers-color-scheme: dark) {
