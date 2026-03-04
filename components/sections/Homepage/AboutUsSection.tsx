@@ -10,40 +10,13 @@ const AboutUsSection = () => {
                 <div className="text-center ">
 
                     <div className="about-logo relative mb-10">
-                        <Image
-                            src="/images/about/about-logo.png"
+                        <Image src="/images/about/about.png"
                             alt="Double Cool Logo"
-                            width={420}
-                            height={260}
+                            width={500}
+                            height={500}
                             className="w-[70%] h-auto mx-auto"
-                            priority
-                        />
-                        <svg viewBox="0 0 300 230" className="w-full h-[600px] absolute -bottom-8 left-0">
-
-                            {/* Invisible bottom curve */}
-                            <path
-                                id="bottomCurve"
-                                d="M20,120 A40,40 0 0,0 280,120"
-                                fill="none"
-                            />
-
-                            {/* Text */}
-                            <text className="fill-[#561C12] text-lg font-bayon">
-                                <textPath
-                                    href="#bottomCurve"
-                                    startOffset="50%"
-                                    textAnchor="middle"
-                                >
-                                    AN ISO 9001 : 2015 CERTIFIED COMPANY
-                                </textPath>
-                            </text>
-
-                        </svg>
-
+                            priority />
                     </div>
-
-
-
 
                     <Image
                         src="/images/about/fssai-logo.png"

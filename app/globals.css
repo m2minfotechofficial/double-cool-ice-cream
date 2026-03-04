@@ -9,6 +9,8 @@
   --font-dm-sans: var(--font-dm-sans);
   --font-bayon: var(--font-bayon);
   --font-baloo2: var(--font-baloo2);
+  --font-carter-one: var(--font-carter-one);
+  --font-hind-siliguri: var(--font-hind-siliguri);
 }
 
 @theme inline {
@@ -16,6 +18,9 @@
   --color-foreground: var(--foreground);
   --font-dm-sans: var(--font-dm-sans);
   --font-bayon: var(--font-bayon);
+  --font-baloo2: var(--font-baloo2);
+  --font-carter-one: var(--font-carter-one);
+  --font-hind-siliguri: var(--font-hind-siliguri);
 }
 
 @media (prefers-color-scheme: dark) {
