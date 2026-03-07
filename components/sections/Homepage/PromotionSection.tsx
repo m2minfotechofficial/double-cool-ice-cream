@@ -8,9 +8,9 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 const PromotionSection = () => {
     useGSAP(() => {
-        const firstText = SplitText.create("#text-1", { type: "words" })
-        const secondText = SplitText.create("#text-2", { type: "words" })
-        const thirdText = SplitText.create("#text-3", { type: "words" })
+        const firstText = SplitText.create("#text-1", { type: "words" });
+        const secondText = SplitText.create("#text-2", { type: "words" });
+        const thirdText = SplitText.create("#text-3", { type: "words" });
 
         gsap.to(firstText.words, {
             color: "#ffffff",
