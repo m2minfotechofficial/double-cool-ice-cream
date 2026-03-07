@@ -1,12 +1,60 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
+import { gsap } from "gsap"
+import { useGSAP } from "@gsap/react"
+
+import { SplitText } from "gsap/SplitText"
+import { ScrollTrigger } from "gsap/all"
+
+gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
 
 const HeroSection = () => {
+    useGSAP(() => {
+
+        let tl = gsap.timeline({ delay: 2 });
+        let split = SplitText.create("#hero-title", { type: "words, chars", mask: "chars" });
+
+        tl.to("#hero-content", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.inOut"
+        })
+            .to("#hero-sub-title", {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                duration: 1,
+                ease: "circ.inOut",
+            }, "-=0.5")
+            .from(split.chars, {
+                opacity: 0,
+                y: 100,
+                duration: 1,
+                ease: "back.inOut",
+                stagger: 0.1
+            }, "-=1")
+            .to("#hero-section", {
+                scale: 0.8,
+                rotate: 5,
+                scrollTrigger: {
+                    trigger: '#hero-section',
+                    start: 'top top',
+                    end: 'bottom top',
+                    scrub: true,
+                    pin: false,
+                    // markers: true
+                }
+            })
+    })
     return (
-        <section className="py-30 flex justify-center items-center bg-[url('/images/hero/hero-bg.jpg')] bg-cover bg-center">
-            <div className="max-w-7xl mx-auto text-center">
-                <h1 className="font-bayon text-9xl text-[#892D1C] tracking-tight">PURE CREAMY</h1>
-                <h2 className="font-bayon text-9xl tracking-tight px-15 py-5 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 shadow-lg">MILK + DELICIOUS CREAM</h2>
+        <section className="py-30 flex justify-center items-center bg-[url('/images/hero/hero-bg.jpg')] bg-cover bg-center bg-fixed" id="hero-section">
+            <div id="hero-content" className="max-w-7xl mx-auto text-center opacity-0">
+                <h1 id="hero-title" className="font-bayon text-9xl text-[#892D1C] tracking-tight">PURE CREAMY</h1>
+                <h2 id="hero-sub-title"
+                    style={{
+                        clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)"
+                    }}
+                    className="font-bayon text-9xl tracking-tight px-15 py-5 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 shadow-lg">MILK + DELICIOUS CREAM</h2>
                 <p className="font-dm-sans text-2xl font-light w-1/2 mx-auto mt-10 text-black">
                     Made with healthy milk and rich cream for the ultimate taste experience. <strong>DOUBLE COOL</strong> is not just ice cream — it’s a mood.
                 </p>

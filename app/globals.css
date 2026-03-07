@@ -5,7 +5,7 @@
   --foreground: #171717;
 }
 
-@theme{
+@theme {
   --font-dm-sans: var(--font-dm-sans);
   --font-bayon: var(--font-bayon);
   --font-baloo2: var(--font-baloo2);
@@ -35,3 +35,8 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+

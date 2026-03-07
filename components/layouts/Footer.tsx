@@ -41,10 +41,10 @@ const Footer = () => {
                     <div className="middle col-span-2">
                         <div className="slogan py-5 absolute top-10 left-1/2 -translate-x-1/2 z-10">
                             <p className="span-2 block text-center">
-                                <span className="px-10 py-1 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 -translate-x-[20%] shadow-xl font-bold font-hind-siliguri text-5xl py-4"><span className="font-carter-one">#DOUBLE COOL</span> খাও</span>
+                                <span className="px-10 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 -translate-x-[20%] shadow-xl font-bold font-hind-siliguri text-5xl py-4"><span className="font-carter-one">#DOUBLE COOL</span> খাও</span>
                             </p>
                             <p className="span-2 block text-center">
-                                <span className="px-10 py-1 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 translate-x-[30%] shadow-xl font-bold font-hind-siliguri text-5xl py-4">গরম ভুলে যাও</span>
+                                <span className="px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 translate-x-[30%] shadow-xl font-bold font-hind-siliguri text-5xl py-4">গরম ভুলে যাও</span>
                             </p>
                         </div>
                         <Image
