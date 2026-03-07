@@ -21,7 +21,7 @@ const PromotionSection = () => {
                 start: "top 70%",
                 end: "50% 70%",
                 scrub: 0.5,
-                markers: true
+                // markers: true
             }
         })
         gsap.to("#logo", {
@@ -33,7 +33,7 @@ const PromotionSection = () => {
                 start: "top 70%",
                 end: "50% 70%",
                 scrub: 0.5,
-                markers: true
+                // markers: true
             }
         })
         gsap.to(secondText.words, {
