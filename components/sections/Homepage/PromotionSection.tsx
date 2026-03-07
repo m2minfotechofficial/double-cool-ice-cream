@@ -45,7 +45,7 @@ const PromotionSection = () => {
                 start: "20% 70%",
                 end: "bottom 70%",
                 scrub: 0.5,
-                markers: true
+                // markers: true
             }
         })
         gsap.to(".highlight-text", {
@@ -56,7 +56,7 @@ const PromotionSection = () => {
                 start: "20% 70%",
                 end: "bottom 70%",
                 scrub: 0.5,
-                markers: true
+                // markers: true
             }
         })
         gsap.to(thirdText.words, {
@@ -68,7 +68,7 @@ const PromotionSection = () => {
                 start: "bottom 60%",
                 end: "bottom 50%",
                 scrub: 0.5,
-                markers: true
+                // markers: true
             }
         })
     })
