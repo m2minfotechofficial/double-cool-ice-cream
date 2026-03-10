@@ -6,6 +6,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
 
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
+
 const DistributorshipCTASection = () => {
     useGSAP(() => {
         const distributorshipHead = SplitText.create("#distributorship-head", { type: "words", mask: "words" });

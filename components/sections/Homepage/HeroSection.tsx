@@ -58,17 +58,17 @@ const HeroSection = () => {
                 />
             </div>
             <div id="hero-content" className="max-w-7xl mx-auto text-center opacity-0 relative z-10">
-                <h1 id="hero-title" className="font-bayon text-9xl text-[#892D1C] tracking-tight">PURE CREAMY</h1>
+                <h1 id="hero-title" className="font-bayon 2xl:text-9xl lg:text-8xl md:text-6xl text-3xl text-[#892D1C] tracking-tight">PURE CREAMY</h1>
                 <h2 id="hero-sub-title"
                     style={{
                         clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)"
                     }}
-                    className="font-bayon text-9xl tracking-tight px-15 py-5 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 shadow-lg">MILK + DELICIOUS CREAM</h2>
-                <p className="font-dm-sans text-2xl font-light w-1/2 mx-auto mt-10 text-black">
+                    className="font-bayon mx-10 2xl:text-9xl lg:text-8xl md:text-6xl text-3xl tracking-tight lg:px-15 px-6  py-5 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 shadow-lg">MILK + DELICIOUS CREAM</h2>
+                <p className="font-dm-sans 2xl:text-2xl xl:text-xl text-sm font-light w-1/2 mx-auto mt-10 text-black">
                     Made with healthy milk and rich cream for the ultimate taste experience. <strong>DOUBLE COOL</strong> is not just ice cream — it’s a mood.
                 </p>
-                <Link href="/shop" className="inline-flex items-center font-bold text-white text-2xl rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#892D1C] ps-2 pe-5 py-2.5 mt-10 font-baloo2">
-                    <Image priority src="/images/hero/icon-icecream.png" alt="shop now" width={100} height={100} className="w-auto h-10 -rotate-36" />
+                <Link href="/shop" className="inline-flex items-center font-bold text-white 2xl:text-2xl md:text-lg text-sm rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#892D1C] ps-2 pe-5 py-2.5 mt-10 font-baloo2">
+                    <Image priority src="/images/hero/icon-icecream.png" alt="shop now" width={100} height={100} className="w-auto md:h-10 h-6 -rotate-36" />
                     <span>TASTE THE MAGIC</span>
                 </Link>
             </div>

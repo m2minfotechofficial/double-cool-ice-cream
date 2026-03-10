@@ -27,12 +27,13 @@ const Header = () => {
         }
     }, { scope: container, dependencies: [isOpen] });
 
+
     return (
         <header ref={container} className="font-dm-sans max-w-7xl mx-auto fixed top-0 left-0 right-0 z-40">
             <nav className="flex justify-between items-center p-4">
                 {/* Logo */}
                 <Link href="/" className="logo">
-                    <Image src={logo} alt="logo" width={150} height={150} className="w-auto h-20 drop-shadow-xl" priority />
+                    <Image src={logo} alt="logo" width={200} height={200} className="w-auto md:h-25 h-20 drop-shadow-xl" priority />
                 </Link>
 
                 {/* Background Mask (Overlay) */}
@@ -45,15 +46,16 @@ const Header = () => {
                 {/* Right Side Sliding Menu */}
                 <div
                     ref={menuRef}
-                    style={{ clipPath: "polygon(15% 0%, 100% 0, 100% 100%, 0% 100%)" }}
-                    className="nav-menus bg-gray-300 fixed w-full md:w-1/2 h-screen right-0 top-0 p-10 flex translate-x-full z-50"
+                    // style={{ clipPath: `polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)` }}
+                    className="[clip-path:polygon(0%_0%,_100%_0%,_100%_100%,_0%_100%)] 
+        lg:[clip-path:polygon(15%_0%,_100%_0%,_100%_100%,_0%_100%)] nav-menus bg-gray-300 fixed w-full lg:w-1/2 h-screen right-0 top-0 p-10 flex translate-x-full z-50"
                 >
-                    <ul className="nav-links flex flex-col font-bayon items-start h-full justify-center p-5 text-4xl md:text-6xl gap-5 -skew-x-10 ms-10">
+                    <ul className="nav-links flex flex-col font-bayon items-start h-full justify-center p-5 text-4xl md:text-6xl gap-5 lg:-skew-x-10 ms-10">
                         {["Home", "About", "Products", "Quality", "Gallery", "Contact"].map((item, index) => (
                             <li key={item}>
                                 <Link
                                     href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                                    className={`text-[#892D1C] skew-x-10 font-bold hover:scale-105 hover:text-[#FC3327] inline-block transition-all duration-300 ml-${20 - (index * 4)}`}
+                                    className={`text-[#892D1C] lg:skew-x-10 font-bold hover:scale-105 hover:text-[#FC3327] inline-block transition-all duration-300 ml-${20 - (index * 4)}`}
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {item}
@@ -83,10 +85,10 @@ const Header = () => {
                 <button
                     onClick={() => setIsOpen(true)}
                     type="button"
-                    className="bg-[#892D1C] relative z-30 me-5 md:me-10 transition-all duration-300 hover:text-[#FC3327] hover:scale-110 py-4 px-4 inline-block rounded-xl border border-dashed border-white cursor-pointer active:scale-95"
+                    className="bg-[#ffffffb6] relative z-30 me-5 md:me-10 transition-all duration-300 hover:text-[#FC3327] hover:scale-110 py-3 px-3 inline-block rounded-xl border border-dashed border-black cursor-pointer active:scale-95"
                 >
-                    <span className="block w-6 h-[2px] bg-white mb-2"></span>
-                    <span className="block w-4 h-[2px] bg-white"></span>
+                    <span className="block w-6 h-[2px] bg-black mb-2"></span>
+                    <span className="block w-4 h-[2px] bg-black"></span>
                 </button>
             </nav>
         </header>

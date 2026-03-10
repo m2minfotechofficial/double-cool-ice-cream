@@ -7,7 +7,7 @@ const PromotionSection = dynamic(() => import("@/components/sections/Homepage/Pr
 const AboutUsSection = dynamic(() => import("@/components/sections/Homepage/AboutUsSection"));
 const WhyChooseUsSection = dynamic(() => import("@/components/sections/Homepage/WhyChooseUsSection"));
 const DistributorshipCTASection = dynamic(() => import("@/components/sections/Homepage/DistributorshipCTASection"));
-
+const MostPopularProducts = dynamic(() => import("@/components/sections/Homepage/MostPopularProducts"));
 
 export const metadata: Metadata = {
   title: "Double Cool | Pure Creamy Ice Cream & Frozen Treats in West Bengal",
@@ -21,8 +21,9 @@ export default function Home() {
       <CategorySection />
       <PromotionSection />
       <AboutUsSection />
-      <WhyChooseUsSection />
-      <DistributorshipCTASection />
+      {/* <MostPopularProducts /> */}
+      {/* <WhyChooseUsSection /> */}
+      {/* <DistributorshipCTASection /> */}
     </>
   );
 }
