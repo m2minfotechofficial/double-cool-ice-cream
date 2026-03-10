@@ -5,6 +5,7 @@ import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import SmoothWrapper from "@/components/layouts/SmoothWrapper";
 import Loader from "@/components/layouts/Loader";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,6 +22,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </SmoothWrapper>
+        <SpeedInsights />
       </body>
     </html>
   );

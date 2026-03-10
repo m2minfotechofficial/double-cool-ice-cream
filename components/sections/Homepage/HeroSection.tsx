@@ -12,8 +12,8 @@ gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
 const HeroSection = () => {
     useGSAP(() => {
 
-        let tl = gsap.timeline({delay: 2});
-        let split = SplitText.create("#hero-title", { type: "words, chars", mask: "chars" });
+        const tl = gsap.timeline({delay: 2});
+        const split = SplitText.create("#hero-title", { type: "words, chars", mask: "chars" });
 
         tl.to("#hero-content", {
             opacity: 1,
