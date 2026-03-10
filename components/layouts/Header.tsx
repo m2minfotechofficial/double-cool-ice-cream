@@ -9,11 +9,7 @@ import { useGSAP } from "@gsap/react";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
     const container = useRef<HTMLDivElement>(null);
-=======
-    const container = useRef<HTMLElement>(null);
->>>>>>> f23eb7d5519b3567e202d2aa2e11281654361c55
     const menuRef = useRef<HTMLDivElement>(null);
     const maskRef = useRef<HTMLDivElement>(null);
 
