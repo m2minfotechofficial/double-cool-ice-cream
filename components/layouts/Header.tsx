@@ -9,9 +9,9 @@ import { useGSAP } from "@gsap/react";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const container = useRef();
-    const menuRef = useRef();
-    const maskRef = useRef();
+    const container = useRef<HTMLDivElement>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
+    const maskRef = useRef<HTMLDivElement>(null);
 
     // GSAP Animation Logic
     useGSAP(() => {
