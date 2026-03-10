@@ -10,7 +10,7 @@
   --font-bayon: var(--font-bayon);
   --font-baloo2: var(--font-baloo2);
   --font-carter-one: var(--font-carter-one);
-  --font-hind-siliguri: var(--font-hind-siliguri);
+  --font-anek-bangla: var(--font-anek-bangla);
 }
 
 @theme inline {
@@ -34,6 +34,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {

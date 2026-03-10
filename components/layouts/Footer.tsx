@@ -1,13 +1,60 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Footer = () => {
+    useGSAP(() => {
+        gsap.to(".slogan", {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            ease: "power2.inOut",
+            stagger: 0.5,
+            scrollTrigger: {
+                trigger: "#footer-section",
+                start: "top 50%",
+                end: "top 50%",
+                // markers: true,
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        gsap.from("#icecream", {
+            scale: 0,
+            y: 100,
+            ease: "back.inOut",
+            scrollTrigger: {
+                trigger: "#footer-section",
+                start: "top 50%",
+                end: "top 50%",
+                // markers: true,
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        gsap.from(".sub-section", {
+            opacity: 0,
+            y: 100,
+            stagger: 0.5,
+            scrollTrigger: {
+                trigger: "#footer-section",
+                start: "top 50%",
+                end: "top 50%",
+                // markers: true,
+                toggleActions: "play none none reverse",
+            }
+        })
+    })
     return (
-        <footer className="bg-black px-20 py-20 p-6 relative">
+        <footer className="bg-black px-20 py-20 p-6 relative" id="footer-section">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 items-center">
-                    <div className="left">
+                    <div className="left sub-section">
                         <Image
+                            id="foot-logo"
                             src="/images/footer/foot-logo.png"
                             width={500}
                             height={500}
@@ -39,15 +86,20 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="middle col-span-2">
-                        <div className="slogan py-5 absolute top-10 left-1/2 -translate-x-1/2 z-10">
-                            <p className="span-2 block text-center">
-                                <span className="px-10 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 -translate-x-[20%] shadow-xl font-bold font-hind-siliguri text-5xl py-4"><span className="font-carter-one">#DOUBLE COOL</span> খাও</span>
+                        <div id="slogans" className="py-5 absolute -top-5 left-1/2 -translate-x-1/2 z-10 font-extrabold">
+                            <p style={{
+                                clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+                            }} className="slogan px-10 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 shadow-xl translate-x-[20%] font-anek-bangla text-5xl py-4">
+                                <span className="font-carter-one">#DOUBLECOOL</span> খাও
                             </p>
-                            <p className="span-2 block text-center">
-                                <span className="px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 translate-x-[30%] shadow-xl font-bold font-hind-siliguri text-5xl py-4">গরম ভুলে যাও</span>
+                            <p style={{
+                                clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+                            }} className="relative slogan px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 translate-x-[50%] top-5 shadow-xl font-anek-bangla text-5xl py-4">
+                                গরম ভুলে যাও
                             </p>
                         </div>
                         <Image
+                            id="icecream"
                             src="/images/footer/icecream.png"
                             width={500}
                             height={500}
@@ -55,7 +107,7 @@ const Footer = () => {
                             className="w-2/3 h-auto drop-shadow-xl mx-auto z-20 relative rotate-30 mt-3"
                         />
                     </div>
-                    <div className="right">
+                    <div className="right sub-section">
                         <div className="social-links">
                             <ul className="flex items-center gap-3">
                                 <li>
@@ -70,12 +122,12 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <Link href="#">
-                                        <Image src="/images/footer/Youtube.png" alt="youtube icon" width={50} height={50} className="w-9 object-contain h-9 border border-white rounded-full p-0.5" />
+                                        <Image src="/images/footer/YouTube.png" alt="youtube icon" width={50} height={50} className="w-9 object-contain h-9 border border-white rounded-full p-0.5" />
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="#">
-                                        <Image src="/images/footer/Linkedin.png" alt="linkedin icon" width={50} height={50} className="w-9 object-contain h-9 border border-white rounded-full p-0.5" />
+                                        <Image src="/images/footer/LinkedIn.png" alt="linkedin icon" width={50} height={50} className="w-9 object-contain h-9 border border-white rounded-full p-0.5" />
                                     </Link>
                                 </li>
                             </ul>

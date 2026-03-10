@@ -1,6 +1,11 @@
-import React from 'react'
+"use client"
 import { WhyChooseUsCard } from '@/types'
 import Image from 'next/image'
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 const whyChooseUsData: WhyChooseUsCard[] = [
     {
@@ -30,62 +35,83 @@ const whyChooseUsData: WhyChooseUsCard[] = [
 ]
 
 const WhyChooseUsSection = () => {
+    useGSAP(() => {
+        // 1. Animate Header Text
+        const whyChooseUsHead = new SplitText("#why-choose-us-head", { type: "words" });
+
+        gsap.from(whyChooseUsHead.words, {
+            opacity: 0,
+            y: 20,
+            stagger: 0.5,
+            duration: 1,
+            scrollTrigger: {
+                trigger: "#why-choose-us-head",
+                start: "top 90%",
+                toggleActions: "play none none reverse",
+            }
+        });
+
+        gsap.from(".why-choose-us-card", {
+            opacity: 0,
+            y: -100,
+            stagger: 0.5,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: "#why-choose-us-cards",
+                start: "top 70%",
+                end: "50% 70%",
+                // markers: true,
+                scrub: 4,
+            }
+        })
+
+
+    });
+
     return (
         <section className="bg-[#a51f16] py-30 px-20 text-white">
             <div className="max-w-7xl mx-auto">
 
                 {/* Heading */}
                 <div className="mb-14 text-center lg:text-left">
-                    <h2 className="font-bayon xl:text-7xl text-5xl text-[#ffffff] inline-flex gap-3 flex-wrap"><span>WHY DISTRIBUTORS CHOOSE DOUBLE</span> <span className="relative inline-block after:content-[''] after:h-[2px] after:w-[100px] after:bg-[#ffffff] after:absolute after:bottom-3 after:-right-[120px]">COOL</span></h2>
+                    <h2 id="why-choose-us-head" className="font-bayon xl:text-7xl text-5xl text-[#ffffff] inline-flex gap-3 flex-wrap"><span>WHY DISTRIBUTORS CHOOSE DOUBLE</span> <span className="relative inline-block after:content-[''] after:h-[2px] after:w-[100px] after:bg-[#ffffff] after:absolute after:bottom-3 after:-right-[120px]">COOL</span></h2>
 
-                    <p className="mt-3 text-white font-dm-sans text-2xl font-light">
+                    <p id="why-choose-us-content" className="mt-3 text-white font-dm-sans text-2xl font-light">
                         Trusted quality, strong demand, and reliable supply — built for distribution.
                     </p>
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="why-choose-us-cards">
 
                     {whyChooseUsData.map((item: WhyChooseUsCard) => (
-                        <div
-                            key={item.id}
-                            className="
-                relative
-                bg-linear-to-b from-[#D9D9D9]  to-[#FFFFFF]
-                text-[#222]
-                rounded-2xl
-                p-6
-                shadow-xl
-                transition-all
-                duration-300
-                hover:-translate-y-2
-                hover:shadow-2xl
-                pb-20
-              "
-                        >
-                            {/* dashed border effect */}
-                            <div className="absolute inset-2 border border-dashed border-black rounded-xl pointer-events-none" />
+                        <div className='why-choose-us-card' key={item.id}>
+                            <div className="relative bg-linear-to-b from-[#D9D9D9]  to-[#FFFFFF] text-[#222] rounded-2xl p-6 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl pb-20">
+                                {/* dashed border effect */}
+                                <div className="absolute inset-2 border border-dashed border-black rounded-xl pointer-events-none" />
 
-                            {/* Icon */}
-                            <div className="flex justify-end mb-4">
-                                <Image
-                                    src={item.icon}
-                                    alt=""
-                                    width={36}
-                                    height={36}
-                                    aria-hidden="true"
-                                />
+                                {/* Icon */}
+                                <div className="flex justify-end mb-4">
+                                    <Image
+                                        src={item.icon}
+                                        alt=""
+                                        width={36}
+                                        height={36}
+                                        aria-hidden="true"
+                                    />
+                                </div>
+
+                                {/* Title */}
+                                <h3 className="font-bayon text-4xl leading-snug tracking-tight">
+                                    {item.title}
+                                </h3>
+
+                                {/* Description */}
+                                <p className="mt-3 text-xl text-black font-dm-sans leading-relaxed tracking-tight">
+                                    {item.description}
+                                </p>
                             </div>
 
-                            {/* Title */}
-                            <h3 className="font-bayon text-4xl leading-snug tracking-tight">
-                                {item.title}
-                            </h3>
-
-                            {/* Description */}
-                            <p className="mt-3 text-xl text-black font-dm-sans leading-relaxed tracking-tight">
-                                {item.description}
-                            </p>
                         </div>
                     ))}
 

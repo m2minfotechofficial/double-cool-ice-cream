@@ -1,5 +1,5 @@
 import "./globals.css";
-import { dmSans, bayon, baloo2, carterOne, hindSiliguri } from "./fonts";
+import { dmSans, bayon, baloo2, carterOne, anekBangla } from "./fonts";
 
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
@@ -12,9 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${bayon.variable} ${baloo2.variable} ${carterOne.variable} ${hindSiliguri.variable} min-h-screen antialiased scroll-smooth touch-manipulation scrollbar-hide `}>
-
-
+      <body suppressHydrationWarning className={`${dmSans.variable} ${bayon.variable} ${baloo2.variable} ${carterOne.variable} ${anekBangla.variable} min-h-screen antialiased scroll-smooth touch-manipulation scrollbar-hide `}>
         <Header />
         <Loader />
         <SmoothWrapper >

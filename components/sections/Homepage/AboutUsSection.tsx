@@ -1,7 +1,82 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 const AboutUsSection = () => {
+    useGSAP(() => {
+        const aboutHead = SplitText.create("#about-head", { type: "words", mask: "words" })
+        const aboutContent = SplitText.create("#about-content", { type: "words", mask: "words" })
+
+        gsap.from(aboutHead.words, {
+            opacity: 0,
+            y: -100,
+            ease: "back.inOut",
+            stagger: 1,
+            scrollTrigger: {
+                trigger: "#about-head",
+                start: "top 90%",
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        gsap.from("#about-logo", {
+            opacity: 0,
+            rotate: 360,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: "#about-logo",
+                start: "top 70%",
+                end: "top 70%",
+                // markers: true,
+                scrub: 5
+            }
+        })
+
+        gsap.from(aboutContent.words, {
+            opacity: 0,
+            y: -100,
+            ease: "power2.inOut",
+            stagger: 0.02,
+            scrollTrigger: {
+                trigger: "#about-content",
+                start: "top 90%",
+                toggleActions: "play none none reverse",
+            }
+        })
+
+        gsap.to(".highlight-text", {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            ease: "back.inOut",
+            stagger: 1,
+            scrollTrigger: {
+                trigger: "#exp-tag",
+                start: "top 70%",
+                end: "top 70%",
+                // markers: true,
+                scrub: 5
+            }
+        })
+
+        gsap.from("#fssai-logo", {
+            opacity: 0,
+            y: -100,
+            ease: "back.inOut",
+            stagger: 1,
+            scrollTrigger: {
+                trigger: "#fssai-logo",
+                start: "top 60%",
+                end: "top 60%",
+                // markers: true,
+                scrub: 5
+            }
+        })
+
+    })
     return (
         <section className="bg-[#efefef] py-20 px-20">
             <div className="max-w-7xl grid lg:grid-cols-2 gap-5 items-center mx-auto">
@@ -11,6 +86,7 @@ const AboutUsSection = () => {
 
                     <div className="about-logo relative mb-10">
                         <Image src="/images/about/about.png"
+                            id="about-logo"
                             alt="Double Cool Logo"
                             width={500}
                             height={500}
@@ -19,6 +95,7 @@ const AboutUsSection = () => {
                     </div>
 
                     <Image
+                        id="fssai-logo"
                         src="/images/about/fssai-logo.png"
                         alt="fssai logo"
                         width={100}
@@ -37,15 +114,15 @@ const AboutUsSection = () => {
 
                     {/* Heading */}
                     <div className="flex items-end gap-4 mb-6">
-                        <h2 className="font-bayon text-7xl text-[#561C12]">
+                        <h2 className="font-bayon text-7xl text-[#561C12]" id="about-head">
                             ABOUT US
                         </h2>
                         <span className="w-[100px] h-[2px] bg-[#561C12] mb-3" />
                     </div>
 
                     {/* Card */}
-                    <div className="relative bg-white rounded-2xl shadow-xl p-10">
-                        <p className="text-gray-700 leading-relaxed text-lg font-dm-sans">
+                    <div className="relative bg-white shadow-xl p-10" id="about-card">
+                        <p className="text-gray-700 leading-relaxed text-lg font-dm-sans" id="about-content">
                             Double Cool is a trusted ice cream brand known for its wide
                             variety of frozen treats made with healthy milk and delicious
                             cream. We are an ISO 9001:2015 certified company committed to
@@ -71,11 +148,15 @@ const AboutUsSection = () => {
                         </div>
 
                         {/* EXPERIENCE TAG */}
-                        <div className="absolute -bottom-15 left-10 rotate-[-8deg]">
-                            <div className="bg-black border-2 border-white text-white font-bayon px-6 py-2 text-4xl shadow-xl">
+                        <div className="absolute -bottom-15 left-10 rotate-[-8deg]" id="exp-tag">
+                            <div style={{
+                                clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)"
+                            }} className="bg-black highlight-text border-2 border-white text-white font-bayon px-6 py-2 text-4xl shadow-xl">
                                 10+ YEARS
                             </div>
-                            <div className="bg-black border-2 border-white text-white font-bayon px-6 py-2 text-4xl mt-1 shadow-xl relative left-10 z-10 -top-3">
+                            <div style={{
+                                clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)"
+                            }} className="bg-black highlight-text border-2 border-white text-white font-bayon px-6 py-2 text-4xl mt-1 shadow-xl relative left-10 z-10 -top-3">
                                 EXPERIENCE
                             </div>
                         </div>

@@ -1,10 +1,13 @@
-import AboutUsSection from "@/components/sections/Homepage/AboutUsSection";
-import CategorySection from "@/components/sections/Homepage/CategorySection";
-import DistributorshipCTASection from "@/components/sections/Homepage/DistributorshipCTASection";
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/sections/Homepage/HeroSection";
-import PromotionSection from "@/components/sections/Homepage/PromotionSection";
-import WhyChooseUsSection from "@/components/sections/Homepage/WhyChooseUsSection";
 import type { Metadata } from "next";
+
+const CategorySection = dynamic(() => import("@/components/sections/Homepage/CategorySection"));
+const PromotionSection = dynamic(() => import("@/components/sections/Homepage/PromotionSection"));
+const AboutUsSection = dynamic(() => import("@/components/sections/Homepage/AboutUsSection"));
+const WhyChooseUsSection = dynamic(() => import("@/components/sections/Homepage/WhyChooseUsSection"));
+const DistributorshipCTASection = dynamic(() => import("@/components/sections/Homepage/DistributorshipCTASection"));
+
 
 export const metadata: Metadata = {
   title: "Double Cool | Pure Creamy Ice Cream & Frozen Treats in West Bengal",

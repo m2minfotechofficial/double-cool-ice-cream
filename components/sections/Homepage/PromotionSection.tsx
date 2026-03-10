@@ -14,14 +14,13 @@ const PromotionSection = () => {
 
         gsap.to(firstText.words, {
             color: "#ffffff",
-            stagger: 0.5,
-            ease: "power1.in",
+            stagger: 0.3,
+            // ease: "power1.in",
             scrollTrigger: {
                 trigger: "#text-1",
                 start: "top 70%",
-                end: "50% 70%",
-                scrub: 0.5,
-                // markers: true
+                end: "bottom 70%",
+                scrub: 1,
             }
         })
         gsap.to("#logo", {
@@ -29,23 +28,21 @@ const PromotionSection = () => {
             scale: 1,
             ease: "power1.in",
             scrollTrigger: {
-                trigger: "#logo",
-                start: "top 70%",
-                end: "50% 70%",
-                scrub: 0.5,
-                // markers: true
+                trigger: "#text-1",
+                start: "bottom 70%",
+                end: "bottom 70%",
+                scrub: 1,
             }
         })
         gsap.to(secondText.words, {
             color: "#ffffff",
             stagger: 0.5,
-            ease: "power1.in",
+            // ease: "power1.in",
             scrollTrigger: {
                 trigger: "#text-2",
-                start: "20% 70%",
-                end: "bottom 70%",
-                scrub: 0.5,
-                // markers: true
+                start: "top 50%",
+                end: "bottom 50%",
+                scrub: 1,
             }
         })
         gsap.to(".highlight-text", {
@@ -55,20 +52,18 @@ const PromotionSection = () => {
                 trigger: ".highlight-text",
                 start: "20% 70%",
                 end: "bottom 70%",
-                scrub: 0.5,
-                // markers: true
+                toggleActions: "play none none reverse",
             }
         })
         gsap.to(thirdText.words, {
             color: "#ffffff",
-            stagger: 0.5,
+            stagger: 0.4,
             ease: "power1.in",
             scrollTrigger: {
                 trigger: "#text-2",
                 start: "bottom 60%",
                 end: "bottom 50%",
-                scrub: 0.5,
-                // markers: true
+                scrub: 1,
             }
         })
     })

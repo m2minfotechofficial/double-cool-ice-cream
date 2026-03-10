@@ -19,7 +19,7 @@ const SmoothWrapper = ({ children }: { children: React.ReactNode }) => {
             content: "#smooth-content",
             smooth: 1.5,               // Smoothing ki intensity
             effects: true,              // data-speed aur data-lag attributes enable karne ke liye
-            smoothTouch: 0.1,           // Mobile par smoothing behavior
+            smoothTouch: false,         // Mobile par JS smooth scroll disable karke native scroll use karna performance ke liye best hai
         });
     }, { scope: mainRef });
 

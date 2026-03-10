@@ -46,27 +46,25 @@ const CategorySection = () => {
         gsap.from(categoryHead.words, {
             opacity: 0,
             y: -100,
-            ease: "back.inOut",
-            stagger: 1,
+            ease: "power2.inOut",
+            stagger: 0.05,
             scrollTrigger: {
                 trigger: "#category-head",
-                start: "top 90%",
-                end: "top 90%",
-                // markers: true,
-                scrub: 1
+                start: "top 70%",
+                end: "50% 70%",
+                toggleActions: "play none none reverse",
             }
         })
         gsap.from(".category-card", {
             opacity: 0,
             scale: 0,
-            stagger: 0.5,
+            stagger: 1,
             duration: 1,
             scrollTrigger: {
                 trigger: "#category-container",
-                start: "top 50%",
-                end: "top 50%",
-                // markers: true,
-                scrub: 5
+                start: "top 70%",
+                end: "50% 70%",
+                scrub: 4,
             }
         })
 
