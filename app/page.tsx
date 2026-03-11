@@ -21,9 +21,9 @@ export default function Home() {
       <CategorySection />
       <PromotionSection />
       <AboutUsSection />
-      {/* <MostPopularProducts /> */}
-      {/* <WhyChooseUsSection /> */}
-      {/* <DistributorshipCTASection /> */}
+      <MostPopularProducts />
+      <WhyChooseUsSection />
+      <DistributorshipCTASection />
     </>
   );
 }

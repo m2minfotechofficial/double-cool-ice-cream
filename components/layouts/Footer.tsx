@@ -86,15 +86,15 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="middle col-span-2">
-                        <div id="slogans" className="py-5 absolute -top-5 left-1/2 -translate-x-1/2 z-10 font-extrabold">
+                        <div id="slogans" className="py-5 md:absolute relative -top-5 left-1/2 -translate-x-1/2 z-10 font-extrabold">
                             <p style={{
                                 clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
-                            }} className="slogan px-10 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 shadow-xl translate-x-[20%] font-anek-bangla text-5xl py-4">
+                            }} className="slogan text-end px-10 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 shadow-xl md:translate-x-[20%] font-anek-bangla md:text-5xl text-2xl py-4">
                                 <span className="font-carter-one">#DOUBLECOOL</span> খাও
                             </p>
                             <p style={{
                                 clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
-                            }} className="relative slogan px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 translate-x-[50%] top-5 shadow-xl font-anek-bangla text-5xl py-4">
+                            }} className="relative slogan px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 translate-x-[50%] top-5 shadow-xl font-anek-bangla md:text-5xl text-2xl py-4">
                                 গরম ভুলে যাও
                             </p>
                         </div>

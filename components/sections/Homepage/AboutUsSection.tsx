@@ -161,7 +161,7 @@ const AboutUsSection = () => {
 
                     <div className="text-center lg:text-left mt-16 md:mt-20">
                         {/* Button */}
-                        <Link href="/shop" className="inline-flex items-center justify-center font-bold text-white text-lg lg:text-2xl rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#892D1C] ps-2 pe-4 lg:pe-5 py-2 lg:py-2.5 font-baloo2">
+                        <Link href="/shop" className="inline-flex items-center justify-center font-bold text-white text-lg xl:text-2xl lg:text-2xl rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#892D1C] ps-2 pe-4 lg:pe-5 py-2 lg:py-2.5 font-baloo2">
                             <Image src="/images/about/info-icon.png" alt="shop now" width={80} height={80} className="w-auto h-5 lg:h-6 mx-2" />
                             <span>KNOW MORE</span>
                         </Link>

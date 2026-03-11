@@ -69,10 +69,10 @@ const MostPopularProducts = () => {
         <section ref={containerRef} className="overflow-hidden bg-white">
             <div
                 ref={sliderRef}
-                className="flex items-center h-dvh w-fit px-[10%] gap-20"
+                className="flex items-center min-h-dvh w-fit px-[10%] gap-20"
             >
                 {/* Heading */}
-                <h2 id="popular-products-head" className="font-bayon shrink-0 text-8xl text-[#892D1C] tracking-tight text-center">
+                <h2 id="popular-products-head" className="font-bayon shrink-0 2xl:text-8xl xl:text-8xl md:text-5xl text-4xl text-[#892D1C] tracking-tight text-center">
                     <span className="span-1 block" id="text-one">
                         DISCOVER OUR
                     </span>
@@ -89,7 +89,7 @@ const MostPopularProducts = () => {
                 {/* Product Cards Wrapper */}
                 <div className="flex items-center gap-40">
                     {[1, 2, 3, 4].map((item) => (
-                        <div key={item} className="popular-product-card relative w-[600px] h-[500px] shrink-0">
+                        <div key={item} className="popular-product-card relative lg:w-[600px] w-[400px] lg:h-[500px] h-[300px] shrink-0">
                             <Image
                                 width={700}
                                 height={500}

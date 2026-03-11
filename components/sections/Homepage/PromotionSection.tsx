@@ -70,7 +70,7 @@ const PromotionSection = () => {
     return (
         <section className="bg-[#961E17] md:px-20 px-10 md:py-30 py-10">
             <div className="max-w-7xl mx-auto">
-                <h2 className="font-bayon 2xl:text-8xl lg:text-7xl md:text-5xl text-4xl  tracking-tight text-center">
+                <h2 className="font-bayon 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-5xl text-4xl  tracking-tight text-center">
                     <span className="span-1 text-[#ffffff34]" id="text-1">
                         BUILD YOUR DISTRIBUTION BUSINESS WITH
                     </span>
@@ -86,7 +86,7 @@ const PromotionSection = () => {
                     </span>
                     <span className="span-3 text-[#ffffff34]" id="text-3">IN EVERY ORDER</span>
                 </h2>
-                <p className="font-dm-sans 2xl:text-2xl xl:text-xl text-sm text-white mt-3 w-1/2 mx-auto text-center font-light">
+                <p className="font-dm-sans 2xl:text-2xl xl:text-2xl lg:text-xl text-sm text-white mt-3 w-1/2 mx-auto text-center font-light">
                     High-demand categories. Strong retailer pull. Reliable supply.
                     Partner with <strong className="font-bold">Double Cool</strong> & grow your frozen sales.
                 </p>

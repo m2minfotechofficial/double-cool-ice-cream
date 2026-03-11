@@ -69,20 +69,20 @@ const WhyChooseUsSection = () => {
     });
 
     return (
-        <section className="bg-[#a51f16] py-30 px-20 text-white">
+        <section className="bg-[#a51f16] md:px-20 px-10 md:py-30 py-10 text-white">
             <div className="max-w-7xl mx-auto">
 
                 {/* Heading */}
                 <div className="mb-14 text-center lg:text-left">
-                    <h2 id="why-choose-us-head" className="font-bayon xl:text-7xl text-5xl text-[#ffffff] inline-flex gap-3 flex-wrap"><span>WHY DISTRIBUTORS CHOOSE DOUBLE</span> <span className="relative inline-block after:content-[''] after:h-[2px] after:w-[100px] after:bg-[#ffffff] after:absolute after:bottom-3 after:-right-[120px]">COOL</span></h2>
+                    <h2 id="why-choose-us-head" className="font-bayon 2xl:text-7xl xl:text-7xl lg:text-5xl md:text-4xl text-2xl text-[#ffffff] inline-flex gap-3 flex-wrap"><span>WHY DISTRIBUTORS CHOOSE DOUBLE</span> <span className="relative inline-block after:content-[''] after:h-[2px] after:w-[100px] after:bg-[#ffffff] after:absolute after:bottom-3 after:-right-[120px]">COOL</span></h2>
 
-                    <p id="why-choose-us-content" className="mt-3 text-white font-dm-sans text-2xl font-light">
+                    <p id="why-choose-us-content" className="mt-3 text-white font-dm-sans 2xl:text-2xl xl:text-2xl lg:text-xl text-sm font-light">
                         Trusted quality, strong demand, and reliable supply — built for distribution.
                     </p>
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="why-choose-us-cards">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8" id="why-choose-us-cards">
 
                     {whyChooseUsData.map((item: WhyChooseUsCard) => (
                         <div className='why-choose-us-card' key={item.id}>
