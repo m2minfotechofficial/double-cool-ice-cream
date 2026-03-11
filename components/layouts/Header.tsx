@@ -85,7 +85,7 @@ const Header = () => {
                 <button
                     onClick={() => setIsOpen(true)}
                     type="button"
-                    className="bg-[#ffffffb6] relative z-30 me-5 md:me-10 transition-all duration-300 hover:text-[#FC3327] hover:scale-110 py-3 px-3 inline-block rounded-xl border border-dashed border-black cursor-pointer active:scale-95"
+                    className="bg-[#ffffffb6] relative z-30 md:me-5 transition-all duration-300 hover:text-[#FC3327] hover:scale-110 py-3 px-3 inline-block rounded-xl border border-dashed border-black cursor-pointer active:scale-95"
                 >
                     <span className="block w-6 h-[2px] bg-black mb-2"></span>
                     <span className="block w-4 h-[2px] bg-black"></span>

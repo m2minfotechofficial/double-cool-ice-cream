@@ -74,7 +74,7 @@ const WhyChooseUsSection = () => {
 
                 {/* Heading */}
                 <div className="mb-14 text-center lg:text-left">
-                    <h2 id="why-choose-us-head" className="font-bayon 2xl:text-7xl xl:text-7xl lg:text-5xl md:text-4xl text-2xl text-[#ffffff] inline-flex gap-3 flex-wrap"><span>WHY DISTRIBUTORS CHOOSE DOUBLE</span> <span className="relative inline-block after:content-[''] after:h-[2px] after:w-[100px] after:bg-[#ffffff] after:absolute after:bottom-3 after:-right-[120px]">COOL</span></h2>
+                    <h2 id="why-choose-us-head" className="font-bayon 2xl:text-7xl xl:text-7xl lg:text-5xl md:text-4xl text-2xl text-[#ffffff] inline-flex gap-3 flex-wrap md:leading-normal leading-5"><span>WHY DISTRIBUTORS CHOOSE DOUBLE</span> <span className="relative inline-block after:content-[''] after:h-[2px] after:w-[100px] after:bg-[#ffffff] after:absolute md:after:bottom-3 after:bottom-1 md:after:-right-[120px] after:-right-[105px]">COOL</span></h2>
 
                     <p id="why-choose-us-content" className="mt-3 text-white font-dm-sans 2xl:text-2xl xl:text-2xl lg:text-xl text-sm font-light">
                         Trusted quality, strong demand, and reliable supply — built for distribution.
@@ -102,12 +102,12 @@ const WhyChooseUsSection = () => {
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="font-bayon text-4xl leading-snug tracking-tight">
+                                <h3 className="font-bayon md:text-4xl text-lg leading-snug tracking-tight">
                                     {item.title}
                                 </h3>
 
                                 {/* Description */}
-                                <p className="mt-3 text-xl text-black font-dm-sans leading-relaxed tracking-tight">
+                                <p className="mt-3 md:text-xl text-sm text-black font-dm-sans leading-relaxed tracking-tight">
                                     {item.description}
                                 </p>
                             </div>
