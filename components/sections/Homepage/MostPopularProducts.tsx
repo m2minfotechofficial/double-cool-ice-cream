@@ -23,7 +23,7 @@ const MostPopularProducts = () => {
 
         gsap.to(slider, {
             // Safe to access scrollWidth because of the guard clause above
-            x: () => -(slider.scrollWidth - window.innerWidth + 200),
+            x: () => -(slider.scrollWidth - window.innerWidth),
             ease: "none",
             scrollTrigger: {
                 trigger: container,
@@ -87,7 +87,7 @@ const MostPopularProducts = () => {
                 </h2>
 
                 {/* Product Cards Wrapper */}
-                <div className="flex items-center gap-40">
+                <div className="flex items-center gap-40 py-32">
                     {[1, 2, 3, 4].map((item) => (
                         <div key={item} className="popular-product-card relative lg:w-[600px] w-[400px] lg:h-[500px] h-[300px] shrink-0">
                             <Image
