@@ -86,7 +86,7 @@ const PromotionSection = () => {
                     </span>
                     <span className="span-3 text-[#ffffff34]" id="text-3">IN EVERY ORDER</span>
                 </h2>
-                <p className="font-dm-sans 2xl:text-2xl xl:text-2xl lg:text-xl text-sm text-white mt-3 w-1/2 mx-auto text-center font-light">
+                <p className="font-dm-sans 2xl:text-2xl xl:text-2xl lg:text-xl text-sm text-white mt-3 md:w-1/2 mx-auto text-center font-light">
                     High-demand categories. Strong retailer pull. Reliable supply.
                     Partner with <strong className="font-bold">Double Cool</strong> & grow your frozen sales.
                 </p>

@@ -59,12 +59,12 @@ const DistributorshipCTASection = () => {
                 toggleActions: "play none none reverse",
             }
         })
-        gsap.to("#highlight", {
+        gsap.to("#highlight1", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             ease: "power2.inOut",
             stagger: 0.05,
             scrollTrigger: {
-                trigger: "#highlight",
+                trigger: "#highlight1",
                 start: "top 65%",
                 end: "50% 65%",
                 toggleActions: "play none none reverse",
@@ -72,7 +72,7 @@ const DistributorshipCTASection = () => {
         })
     })
     return (
-        <section className="py-30 px-20 relative">
+        <section className="md:px-20 px-10 md:py-30 py-10 relative">
             <div className="absolute inset-0 w-full h-full -z-10">
                 <Image
                     src="/images/distributorship/distributorship.webp"
@@ -87,13 +87,15 @@ const DistributorshipCTASection = () => {
                         DISTRIBUTORSHIP
                     </span>
                     <span className="span-2 block text-center relative z-10">
-                        <span id="highlight" style={{
-                            clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)"
-                        }} className="px-10 py-1 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 shadow-lg border-3">AVAILABLE</span>
+                        <span id="highlight1"
+                            style={{
+                                clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)"
+                            }}
+                            className="px-10 py-1 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 shadow-lg border-3">AVAILABLE</span>
                     </span>
                     <span className="span-3" id="distributorship-head2">IN YOUR AREA</span>
                 </h2>
-                <p id="distributor-content" className="font-dm-sans 2xl:text-2xl xl:text-2xl lg:text-xl text-sm text-black mt-3 w-1/2 mx-auto text-center font-light">
+                <p id="distributor-content" className="font-dm-sans 2xl:text-2xl xl:text-2xl lg:text-xl text-sm text-black mt-3 md:w-1/2 mx-auto text-center font-light">
                     Join Double Cool’s growing distribution network.
                     Check availability in your area and start supply partnership.
                 </p>

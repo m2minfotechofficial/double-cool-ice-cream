@@ -78,7 +78,7 @@ const CategorySection = () => {
                 </p>
             </div>
             <div className="container mx-auto pt-20" id="category-container">
-                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-5">
                     {
                         categories.map((category) => (
                             <div className="category-card" key={category.id}>
@@ -88,7 +88,7 @@ const CategorySection = () => {
                                     style={{ backgroundColor: category.bgColor }}
                                 >
                                     <Image src={category.image} alt={category.title} width={700} height={400} className="group-hover:scale-[1.3] transition-all duration-300 w-auto h-auto scale-[1.4]" />
-                                    <h3 className="text-4xl bg-black mt-3 font-light text-white uppercase px-8 py-[2px] font-bayon border-3 border-white -rotate-6 -mb-5 shadow -ms-10 tracking-tight text-center w-[200px] group-hover:scale-[1.1] group-hover:-rotate-6 transition-all duration-300">{category.title}</h3>
+                                    <h3 className="md:text-4xl bg-black mt-3 font-light text-white uppercase px-8 py-[2px] font-bayon border-3 border-white -rotate-6 -mb-5 shadow -ms-10 tracking-tight text-center md:w-[200px] group-hover:scale-[1.1] group-hover:-rotate-6 transition-all duration-300">{category.title}</h3>
                                 </Link>
                             </div>
                         ))

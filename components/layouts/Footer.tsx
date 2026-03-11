@@ -94,7 +94,7 @@ const Footer = () => {
                             </p>
                             <p style={{
                                 clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
-                            }} className="relative slogan px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 translate-x-[50%] top-5 shadow-xl font-anek-bangla md:text-5xl text-2xl py-4">
+                            }} className="relative slogan px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 md:translate-x-[50%] translate-x-[20%] top-5 shadow-xl font-anek-bangla md:text-5xl text-2xl py-4">
                                 গরম ভুলে যাও
                             </p>
                         </div>
@@ -104,7 +104,7 @@ const Footer = () => {
                             width={500}
                             height={500}
                             alt="Double Cool Ice Cream"
-                            className="w-2/3 h-auto drop-shadow-xl mx-auto z-20 relative rotate-30 mt-3"
+                            className="md:w-2/3 w-full h-auto drop-shadow-xl mx-auto z-20 relative rotate-30 mt-3"
                         />
                     </div>
                     <div className="right sub-section">
