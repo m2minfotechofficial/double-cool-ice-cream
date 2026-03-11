@@ -29,8 +29,8 @@ const Loader = () => {
             }
         })
             .to(".loader-item", {
-                delay: 0.3,
-                duration: 1,
+                delay: 0.2,
+                duration: 0.5,
                 y: "-100%",
                 stagger: 0.08,
                 ease: "power4.inOut",

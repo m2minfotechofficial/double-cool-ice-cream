@@ -12,7 +12,7 @@ gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
 const HeroSection = () => {
     useGSAP(() => {
 
-        const tl = gsap.timeline({delay: 2});
+        const tl = gsap.timeline({delay: 1});
         const split = SplitText.create("#hero-title", { type: "words, chars", mask: "chars" });
 
         tl.to("#hero-content", {
