@@ -69,12 +69,12 @@ const WhyChooseUsSection = () => {
     });
 
     return (
-        <section className="bg-[#a51f16] md:px-20 px-10 md:py-30 py-10 text-white">
+        <section className="bg-[#a51f16] md:px-20 px-6 md:py-30 py-10 text-white">
             <div className="max-w-7xl mx-auto">
 
                 {/* Heading */}
                 <div className="mb-14 text-center lg:text-left">
-                    <h2 id="why-choose-us-head" className="font-bayon 2xl:text-7xl xl:text-7xl lg:text-5xl md:text-4xl text-2xl text-[#ffffff] inline-flex gap-3 flex-wrap md:leading-normal leading-5"><span>WHY DISTRIBUTORS CHOOSE DOUBLE</span> <span className="relative inline-block after:content-[''] after:h-[2px] after:w-[100px] after:bg-[#ffffff] after:absolute md:after:bottom-3 after:bottom-1 md:after:-right-[120px] after:-right-[105px]">COOL</span></h2>
+                    <h2 id="why-choose-us-head" className="font-bayon 2xl:text-7xl xl:text-7xl lg:text-5xl md:text-4xl text-2xl text-[#ffffff] inline-flex gap-3 flex-wrap md:leading-normal leading-7"><span>WHY DISTRIBUTORS CHOOSE DOUBLE</span> <span className="relative inline-block after:content-[''] after:h-[2px] after:w-[100px] after:bg-[#ffffff] after:absolute md:after:bottom-3 after:bottom-2 md:after:-right-[120px] after:-right-[105px]">COOL</span></h2>
 
                     <p id="why-choose-us-content" className="mt-3 text-white font-dm-sans 2xl:text-2xl xl:text-2xl lg:text-xl text-sm font-light">
                         Trusted quality, strong demand, and reliable supply — built for distribution.

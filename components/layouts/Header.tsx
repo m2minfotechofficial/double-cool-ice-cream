@@ -30,10 +30,10 @@ const Header = () => {
 
     return (
         <header ref={container} className="font-dm-sans max-w-7xl mx-auto fixed top-0 left-0 right-0 z-40">
-            <nav className="flex justify-between items-center p-4">
+            <nav className="flex justify-between items-center md:p-4 p-2">
                 {/* Logo */}
                 <Link href="/" className="logo">
-                    <Image src={logo} alt="logo" width={200} height={200} className="w-auto md:h-25 h-20 drop-shadow-xl" priority />
+                    <Image src={logo} alt="logo" width={200} height={200} className="w-auto md:h-25 h-20 -rotate-20 drop-shadow-xl" priority />
                 </Link>
 
                 {/* Background Mask (Overlay) */}
@@ -85,7 +85,7 @@ const Header = () => {
                 <button
                     onClick={() => setIsOpen(true)}
                     type="button"
-                    className="bg-[#ffffffb6] relative z-30 md:me-5 transition-all duration-300 hover:text-[#FC3327] hover:scale-110 py-3 px-3 inline-block rounded-xl border border-dashed border-black cursor-pointer active:scale-95"
+                    className="bg-[#ffffffb6] relative z-30 md:me-5 me-4 transition-all duration-300 hover:text-[#FC3327] hover:scale-110 py-3 px-3 inline-block rounded-xl border border-dashed border-black cursor-pointer active:scale-95"
                 >
                     <span className="block w-6 h-[2px] bg-black mb-2"></span>
                     <span className="block w-4 h-[2px] bg-black"></span>
