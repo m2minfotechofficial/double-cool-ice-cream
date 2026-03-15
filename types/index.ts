@@ -12,3 +12,11 @@ export interface WhyChooseUsCard {
     icon: string;
     description: string;
 }
+
+export type PopularProduct = {
+    id: number;
+    title: string;
+    bgImg: string;
+    midImg: string;
+    frontImg: string;
+};
