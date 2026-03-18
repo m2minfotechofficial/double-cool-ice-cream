@@ -40,7 +40,7 @@ const Header = () => {
                 <div
                     ref={maskRef}
                     onClick={() => setIsOpen(false)}
-                    className="mask bg-[#0000007a] fixed inset-0 backdrop-blur-md pointer-events-none h-screen w-full"
+                    className="mask bg-[#0000007a] fixed inset-0 backdrop-blur-md pointer-events-none h-screen w-full translate-x-full"
                 ></div>
 
                 {/* Right Side Sliding Menu */}
@@ -55,7 +55,7 @@ const Header = () => {
                             <li key={item}>
                                 <Link
                                     href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                                    className={`text-[#892D1C] lg:skew-x-10 font-bold hover:scale-105 hover:text-[#FC3327] inline-block transition-all duration-300 ml-${20 - (index * 4)}`}
+                                    className={`text-[#892D1C] lg:skew-x-10 font-bold hover:scale-105 hover:text-[#FC3327] inline-block transition-all duration-300 ms-${20 - (index * 4)}`}
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {item}
