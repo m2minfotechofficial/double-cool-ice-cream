@@ -8,51 +8,51 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Footer = () => {
-    useGSAP(() => {
+    // useGSAP(() => {
         
-        ScrollTrigger.refresh();
+    //     ScrollTrigger.refresh();
 
-        gsap.to(".slogan", {
-            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            ease: "power2.inOut",
-            stagger: 0.5,
-            scrollTrigger: {
-                trigger: "#footer-section",
-                start: "top 60%",
-                end: "top 60%",
-                // markers: true,
-                toggleActions: "play none none reverse",
-            }
-        })
+    //     gsap.to(".slogan", {
+    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    //         ease: "power2.inOut",
+    //         stagger: 0.5,
+    //         scrollTrigger: {
+    //             trigger: "#footer-section",
+    //             start: "top 60%",
+    //             end: "top 60%",
+    //             // markers: true,
+    //             toggleActions: "play none none reverse",
+    //         }
+    //     })
 
-        gsap.from("#icecream", {
-            scale: 0,
-            y: 100,
-            ease: "back.inOut",
-            scrollTrigger: {
-                trigger: "#footer-section",
-                start: "top 60%",
-                end: "top 60%",
-                // markers: true,
-                toggleActions: "play none none reverse",
-            }
-        })
+    //     gsap.from("#icecream", {
+    //         scale: 0,
+    //         y: 100,
+    //         ease: "back.inOut",
+    //         scrollTrigger: {
+    //             trigger: "#footer-section",
+    //             start: "top 60%",
+    //             end: "top 60%",
+    //             // markers: true,
+    //             toggleActions: "play none none reverse",
+    //         }
+    //     })
 
-        gsap.from(".sub-section", {
-            opacity: 0,
-            y: 100,
-            stagger: 0.5,
-            scrollTrigger: {
-                trigger: "#footer-section",
-                start: "top 60%",
-                end: "top 60%",
-                // markers: true,
-                toggleActions: "play none none reverse",
-            }
-        })
+    //     gsap.from(".sub-section", {
+    //         opacity: 0,
+    //         y: 100,
+    //         stagger: 0.5,
+    //         scrollTrigger: {
+    //             trigger: "#footer-section",
+    //             start: "top 60%",
+    //             end: "top 60%",
+    //             // markers: true,
+    //             toggleActions: "play none none reverse",
+    //         }
+    //     })
 
         
-    })
+    // })
     return (
         <footer className="bg-black px-20 py-20 p-6 relative" id="footer-section">
             <div className="max-w-7xl mx-auto">
