@@ -48,6 +48,7 @@ export default function TransitionProviders({ children }: TransitionProps): Reac
                         stagger: 0.05,
                         ease: "power4.inOut"
                     });
+                window.scrollTo(0, 0);
             }}
         >
             {/* Loader UI - Jo transition ke waqt dikhega */}

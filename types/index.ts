@@ -20,3 +20,10 @@ export type PopularProduct = {
     midImg: string;
     frontImg: string;
 };
+
+export type Product = {
+    id: number;
+    name: string;
+    image: string;
+    category: string;
+};

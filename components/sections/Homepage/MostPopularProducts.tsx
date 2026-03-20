@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import { PopularProduct } from "@/types";
+import Link from "next/link";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
@@ -138,7 +139,7 @@ const MostPopularProducts = () => {
 
                 gsap.to(bg, { x: x * 0.02, y: y * 0.02, duration: 0.5, ease: "power2.out" });
                 gsap.to(mid, { x: x * 0.06, y: y * 0.06, duration: 0.5, ease: "power2.out" });
-                gsap.to(front, { x: x * 0.15, y: y * 0.15, duration: 0.5, ease: "power2.out" }); 
+                gsap.to(front, { x: x * 0.15, y: y * 0.15, duration: 0.5, ease: "power2.out" });
             };
 
             const handleMouseLeave = () => {
@@ -215,6 +216,23 @@ const MostPopularProducts = () => {
                             </h3>
                         </div>
                     ))}
+                    <Link
+                        href="/products"
+                        className="inline-flex shrink-0 text-nowrap items-center font-bold text-white 2xl:text-2xl xl:text-2xl md:text-lg text-sm rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#892D1C] ps-2 pe-5 py-2.5 mt-10 font-baloo2"
+                    >
+
+                        <Image
+                            priority
+                            src="/images/hero/icon-icecream.png"
+                            alt="shop now"
+                            width={100}
+                            height={100}
+                            className="w-auto md:h-10 h-6 -rotate-36"
+                        />
+
+                        <span>EXPLORE ALL PRODUCTS</span>
+
+                    </Link>
                 </div>
             </div>
         </section>

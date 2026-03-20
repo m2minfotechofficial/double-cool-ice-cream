@@ -142,7 +142,7 @@ export default function About() {
             {/* --- HERO SECTION --- */}
             <section className="hero-section relative h-[80vh] flex flex-col justify-center items-center text-center px-4">
                 <div className="hero-content z-10 relative">
-                    <h1 className="font-bayon 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-5xl text-5xl tracking-tight leading-[1.1]">
+                    <h1 className="font-bayon 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-5xl text-4xl  tracking-tight text-center">
                         <span id="about-intro" className="block text-[#892D1C]">
                             ABOUT DOUBLE COOL
                         </span>
@@ -151,7 +151,7 @@ export default function About() {
                             CRAFTING HAPPINESS
                         </span>
                     </h1>
-                    <p className="mt-8 2xl:text-2xl xl:text-2xl lg:text-xl text-lg max-w-2xl mx-auto font-dm-sans text-gray-700">
+                    <p className="mt-8 2xl:text-2xl xl:text-2xl lg:text-xl text-sm max-w-2xl mx-auto font-dm-sans text-gray-700">
                         We bring joy with every scoop through quality ingredients and unforgettable taste.
                     </p>
                 </div>
@@ -162,25 +162,25 @@ export default function About() {
             {/* --- STORYTELLING SECTION --- */}
             <section className="story-wrapper relative py-10 lg:py-20 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
                 <div className="w-full lg:w-1/2 relative">
-                    <div className="story-visual w-full h-[40vh] lg:h-[60vh] relative rounded-3xl overflow-hidden bg-white shadow-xl">
+                    <div className="story-visual w-full h-[40vh] lg:h-[60vh] relative overflow-hidden ">
                         <Image
                             src="/images/about/about-us-logo.png"
                             alt="Double Cool Story"
-                            width={600}
-                            height={600}
-                            className="object-contain w-full h-full p-4"
+                            width={500}
+                            height={500}
+                            className="object-contain w-[80%] h-full p-4 mx-auto"
                         />
                     </div>
                 </div>
 
                 <div className="w-full lg:w-1/2 flex flex-col lg:pt-[10vh] lg:pb-[20vh] space-y-10 lg:space-y-32">
-                    <p className="story-para font-bayon lg:text-6xl md:text-5xl text-4xl leading-snug text-[#892D1C]">
+                    <p className="story-para font-bayon lg:text-6xl md:text-5xl text-lg leading-snug text-[#892D1C]">
                         Double Cool started with a simple vision — <span className="text-gray-800">to create delicious, affordable, and high-quality ice cream for everyone.</span>
                     </p>
-                    <p className="story-para font-bayon lg:text-6xl md:text-5xl text-4xl leading-snug text-gray-600">
+                    <p className="story-para font-bayon lg:text-6xl md:text-5xl text-lg leading-snug text-gray-600">
                         From a small beginning in our local neighborhood, the love for our crafted scoops grew faster than we ever imagined.
                     </p>
-                    <p className="story-para font-bayon lg:text-6xl md:text-5xl text-4xl leading-snug text-gray-600">
+                    <p className="story-para font-bayon lg:text-6xl md:text-5xl text-lg leading-snug text-gray-600">
                         Today, as a growing brand across regions, our core promise remains the same: <span className="text-[#892D1C] font-bold">we continue to spread smiles with every bite.</span>
                     </p>
                 </div>

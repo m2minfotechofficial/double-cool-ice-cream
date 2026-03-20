@@ -92,14 +92,18 @@ const Footer = () => {
                     </div>
                     <div className="middle col-span-2">
                         <div id="slogans" className="py-5 md:absolute relative -top-5 left-1/2 -translate-x-[60%] z-10 font-extrabold">
-                            <p style={{
-                                clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
-                            }} className="slogan inline-flex gap-2 text-end px-10 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] -rotate-6 shadow-xl md:translate-x-[20%] font-anek-bangla xl:text-5xl lg:text-4xl md:text-3xl text-xl py-4">
+                            <p 
+                            // style={{
+                            //     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+                            // }} 
+                            className="slogan inline-flex gap-2 text-end px-10 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] -rotate-6 shadow-xl md:translate-x-[20%] font-anek-bangla xl:text-5xl lg:text-4xl md:text-3xl text-xl py-4">
                                 <span className="font-carter-one">#DOUBLECOOL</span> খাও
                             </p>
-                            <p style={{
-                                clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
-                            }} className="relative slogan px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 md:translate-x-[50%] translate-x-[20%] top-5 shadow-xl font-anek-bangla xl:text-5xl lg:text-4xl md:text-3xl text-xl py-4">
+                            <p 
+                            // style={{
+                            //     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+                            // }}
+                             className="relative slogan px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 md:translate-x-[50%] translate-x-[20%] top-5 shadow-xl font-anek-bangla xl:text-5xl lg:text-4xl md:text-3xl text-xl py-4">
                                 গরম ভুলে যাও
                             </p>
                         </div>
