@@ -25,7 +25,7 @@ export default function Products() {
 
             <section className="py-12 px-6 max-w-7xl mx-auto" ref={containerRef}>
                 {/* FILTER BUTTONS */}
-                <div className="flex flex-wrap gap-2 justify-center mb-10 sticky top-30 z-10">
+                <div className="flex flex-wrap gap-2 justify-center mb-10 sticky top-25 z-10">
                     {categories.map((cat) => (
                         <button
                             key={cat}
