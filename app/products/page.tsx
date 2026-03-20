@@ -25,11 +25,11 @@ export default function Products() {
 
             <section className="py-12 px-6 max-w-7xl mx-auto" ref={containerRef}>
                 {/* FILTER BUTTONS */}
-                <div className="flex flex-wrap gap-2 justify-center mb-10 sticky top-20 z-10">
+                <div className="flex flex-wrap gap-2 justify-center mb-10 sticky top-30 z-10">
                     {categories.map((cat) => (
                         <button
                             key={cat}
-                            onClick={() => setActiveCategory(cat)}
+                            onClick={() => {setActiveCategory(cat); window.scrollTo({top: 0, behavior: "smooth"})}}
                             className={`md:px-5 px-3 md:py-2 py-1 md:text-xl text-[14px] rounded-full border font-bayon tracking-wider cursor-pointer transition ${activeCategory === cat
                                 ? "bg-[#892D1C] text-white"
                                 : "bg-white text-black"
