@@ -71,11 +71,16 @@ const DistributorshipCTASection = () => {
             }
         })
     })
+
+    const phoneNumber = "917076782185";
+    const message = encodeURIComponent("Hello Double Cool Team, I am interested in becoming a distributor. Please share the dealership process.\n\nName:\nLocation:");
+
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
     return (
         <section className="md:px-20 px-10 md:py-30 py-10 relative">
             <div className="absolute inset-0 w-full h-full -z-10">
                 <Image
-                    src="/images/distributorship/distributorship.webp"
+                    src="/images/distributorship/dist-bg.png"
                     alt="Distributorship Background"
                     fill
                     className="object-cover"
@@ -107,13 +112,13 @@ const DistributorshipCTASection = () => {
                         </Link>
                     </div>
                     <div className="distributor-button">
-                        <Link href="/shop" className=" inline-flex items-center font-bold text-white 2xl:text-2xl xl:text-2xl md:text-lg text-sm rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#4CC91F] ps-2 pe-5 py-2.5 xl:mt-20 mt-5 font-baloo2">
+                        <Link href={whatsappLink} target="_blank" className=" inline-flex items-center font-bold text-white 2xl:text-2xl xl:text-2xl md:text-lg text-sm rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#4CC91F] ps-2 pe-5 py-2.5 xl:mt-20 mt-5 font-baloo2">
                             <Image src="/images/distributorship/wapp.png" alt="shop now" width={80} height={80} className="w-auto md:h-8 h-6 mx-2" />
                             <span>WHATSAPP SALES TEAM</span>
                         </Link>
                     </div>
                     <div className="distributor-button">
-                        <Link href="/shop" className=" inline-flex items-center font-bold text-white 2xl:text-2xl xl:text-2xl md:text-lg text-sm rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#5a5858] ps-2 pe-5 py-2.5 xl:mt-20 mt-5 font-baloo2">
+                        <Link href="tel:+917076782185" className=" inline-flex items-center font-bold text-white 2xl:text-2xl xl:text-2xl md:text-lg text-sm rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#5a5858] ps-2 pe-5 py-2.5 xl:mt-20 mt-5 font-baloo2">
                             <Image src="/images/distributorship/call.png" alt="shop now" width={80} height={80} className="w-auto md:h-8 h-6 mx-2" />
                             <span>CALL SALES TEAM</span>
                         </Link>

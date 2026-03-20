@@ -101,7 +101,7 @@ const AboutUsSection = () => {
                             priority
                         />
                         <p className="text-black font-bayon text-2xl lg:text-3xl font-light">
-                            Lic. No. 123456789
+                            Lic. No. 12823014000176
                         </p>
                     </div>
                 </div>

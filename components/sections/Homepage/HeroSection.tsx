@@ -69,7 +69,7 @@ const HeroSection = () => {
 
             <div className="absolute inset-0 w-full h-full -z-10">
                 <Image
-                    src="/images/hero/hero-bg.jpg"
+                    src="/images/hero/hero-bg-3.png"
                     alt="Hero Background"
                     fill
                     priority

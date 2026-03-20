@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Footer = () => {
     // useGSAP(() => {
-        
+
     //     ScrollTrigger.refresh();
 
     //     gsap.to(".slogan", {
@@ -51,7 +51,7 @@ const Footer = () => {
     //         }
     //     })
 
-        
+
     // })
     return (
         <footer className="bg-black px-20 py-20 p-6 relative" id="footer-section">
@@ -67,24 +67,28 @@ const Footer = () => {
                             className="w-[65%] h-auto drop-shadow-xl mx-auto"
                         />
                         <h2 className="text-white text-center font-bayon text-xl my-3">SIROMONI FOOD PRODUCTS PVT. LTD.</h2>
-                        <div className="contact-actions flex justify-center ps-15">
+                        <div className="contact-actions flex justify-center">
                             <ul>
                                 <li>
-                                    <Link href="tel:+911234567890" className="flex items-center gap-2">
+                                    <Link href="tel:+917076782185" className="flex items-center gap-2">
                                         <Image src="/images/footer/Call.png" alt="call icon" width={50} height={50} className="w-auto h-10" />
-                                        <span className="text-white text-center font-dm-sans text-lg font-light">+91 1234567890</span>
+                                        <span className="text-white text-center font-dm-sans text-lg font-light">+91 7076782185</span>
                                     </Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <Link href="mailto:[EMAIL_ADDRESS]" className="flex items-center gap-2">
                                         <Image src="/images/footer/Mailbox.png" alt="mail icon" width={50} height={50} className="w-auto h-11" />
                                         <span className="text-white text-center font-dm-sans text-lg font-light">demo@email.com</span>
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li>
-                                    <Link href="#" className="flex items-center gap-2 w-[300px]">
+                                    <Link href="#" className="flex items-start gap-2 w-[300px] mt-3">
                                         <Image src="/images/footer/Location.png" alt="location icon" width={50} height={50} className="w-auto h-11" />
-                                        <span className="text-white font-dm-sans text-lg font-light">123 Main St, Kolkata, West Bengal</span>
+                                        <span className="text-white font-dm-sans text-lg font-light">Vill. : Khasjungle, P.O. - Abas, P.S. - Kotwali,
+
+                                            Paschim Medinipur, Pin - 721102,
+
+                                            West Bengal, India.</span>
                                     </Link>
                                 </li>
                             </ul>
@@ -92,18 +96,18 @@ const Footer = () => {
                     </div>
                     <div className="middle col-span-2">
                         <div id="slogans" className="py-5 md:absolute relative -top-5 left-1/2 -translate-x-[60%] z-10 font-extrabold">
-                            <p 
-                            // style={{
-                            //     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
-                            // }} 
-                            className="slogan inline-flex gap-2 text-end px-10 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] -rotate-6 shadow-xl md:translate-x-[20%] font-anek-bangla xl:text-5xl lg:text-4xl md:text-3xl text-xl py-4">
+                            <p
+                                // style={{
+                                //     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+                                // }} 
+                                className="slogan inline-flex gap-2 text-end px-10 text-white text-shadow-lg bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] -rotate-6 shadow-xl md:translate-x-[20%] font-anek-bangla xl:text-5xl lg:text-4xl md:text-3xl text-xl py-4">
                                 <span className="font-carter-one">#DOUBLECOOL</span> খাও
                             </p>
-                            <p 
-                            // style={{
-                            //     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
-                            // }}
-                             className="relative slogan px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 md:translate-x-[50%] translate-x-[20%] top-5 shadow-xl font-anek-bangla xl:text-5xl lg:text-4xl md:text-3xl text-xl py-4">
+                            <p
+                                // style={{
+                                //     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+                                // }}
+                                className="relative slogan px-10 text-white text-shadow-lg -translate-y-[30%] bg-linear-to-r from-[#FC3327] via-[#4CC91F] to-[#961E17] inline-block -rotate-6 md:translate-x-[50%] translate-x-[20%] top-5 shadow-xl font-anek-bangla xl:text-5xl lg:text-4xl md:text-3xl text-xl py-4">
                                 গরম ভুলে যাও
                             </p>
                         </div>
@@ -143,13 +147,36 @@ const Footer = () => {
                         </div>
                         <div className="quick-links font-bayon text-white text-xl mt-10">
                             <ul className="list-disc">
-                                <li>HOME</li>
-                                <li>ABOUT US</li>
-                                <li>PRODUCTS</li>
-                                <li>QUALITY</li>
-                                <li>GALLERY</li>
-                                <li>DISTRIBUTOR</li>
-                                <li>CONTACT US</li>
+                                <li>
+                                    <Link href="/">
+                                        HOME
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/about">
+                                        ABOUT US
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/products">
+                                        PRODUCTS
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/quality">
+                                        QUALITY
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/gallery">
+                                        GALLERY
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/contact">
+                                        CONTACT US
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </div>
