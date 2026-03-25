@@ -14,28 +14,28 @@ const categories: CategoryCard[] = [
         title: "novelties",
         image: "/images/category/novelties.png",
         bgColor: "#892D1C",
-        link: "/category/novelties"
+        link: "/products?cat=novelties"
     },
     {
         id: 2,
         title: "sticks",
         image: "/images/category/sticks.png",
         bgColor: "#267709",
-        link: "/category/sticks"
+        link: "/products?cat=stick"
     },
     {
         id: 3,
         title: "cones",
         image: "/images/category/cones.png",
         bgColor: "#C2180E",
-        link: "/category/cones"
+        link: "/products?cat=cone"
     },
     {
         id: 4,
         title: "cups",
         image: "/images/category/cups.png",
         bgColor: "#092B6C",
-        link: "/category/cups"
+        link: "/products?cat=cup"
     }
 ];
 const CategorySection = () => {

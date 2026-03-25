@@ -1,23 +1,41 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react"; // useState ki jagah ab URL handle karega
+import { useRouter, useSearchParams } from "next/navigation"; 
 import BreadCrumbContainer from "@/components/layouts/BreadCrumbContainer";
 import { products } from "@/data/products";
-import gsap from "gsap";
 import { Product } from "@/types";
 import Image from "next/image";
 
 export default function Products() {
     const containerRef = useRef(null);
-    const [activeCategory, setActiveCategory] = useState("all");
+    
+    // URL se query parameters read karne ke liye
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    
+    // URL me 'cat' parameter check karo, agar nahi hai toh default 'all'
+    const activeCategory = searchParams.get("cat") || "all";
 
     const categories = ["all", "cup", "cone", "stick", "novelties"];
+
+    // Category update karne ka function
+    const handleCategoryChange = (cat: string) => {
+        // URL update karega bina page reload kiye
+        // Example: /products?cat=cup
+        if (cat === "all") {
+            router.push("/products", { scroll: false });
+        } else {
+            router.push(`?cat=${cat}`, { scroll: false });
+        }
+        
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
     const filteredProducts =
         activeCategory === "all"
             ? products
             : products.filter((p) => p.category === activeCategory);
-
 
     return (
         <>
@@ -29,11 +47,12 @@ export default function Products() {
                     {categories.map((cat) => (
                         <button
                             key={cat}
-                            onClick={() => {setActiveCategory(cat); window.scrollTo({top: 0, behavior: "smooth"})}}
-                            className={`md:px-5 px-3 md:py-2 py-1 md:text-xl text-[14px] rounded-full border font-bayon tracking-wider cursor-pointer transition ${activeCategory === cat
-                                ? "bg-[#892D1C] text-white"
-                                : "bg-white text-black"
-                                }`}
+                            onClick={() => handleCategoryChange(cat)}
+                            className={`md:px-5 px-3 md:py-2 py-1 md:text-xl text-[14px] rounded-full border font-bayon tracking-wider cursor-pointer transition ${
+                                activeCategory === cat
+                                    ? "bg-[#892D1C] text-white"
+                                    : "bg-white text-black"
+                            }`}
                         >
                             {cat.toUpperCase()}
                         </button>
