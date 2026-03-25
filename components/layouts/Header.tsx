@@ -38,7 +38,7 @@ const Header = () => {
                 <nav className="flex justify-between items-center md:p-4 p-2">
                     {/* Logo */}
                     <Link href="/" className="logo">
-                        <Image src={logo} alt="logo" width={300} height={300} className="w-auto md:h-30 h-20 -rotate-20 drop-shadow-xl md:p-0 p-2" priority />
+                        <Image src={logo} alt="logo" width={300} height={300} className="w-auto md:h-30 h-25 -rotate-20 drop-shadow-xl md:p-0 p-2" priority />
                     </Link>
 
                     {/* Background Mask (Overlay) */}
