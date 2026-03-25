@@ -8,6 +8,7 @@ import BreadCrumbContainer from "@/components/layouts/BreadCrumbContainer";
 // React Icons
 import { FaArrowTrendUp, FaTruckFast, FaBullhorn, FaHeadset, FaLocationDot, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import Link from "next/link";
 
 // Next.js client component mein plugin register karna best practice hai
 if (typeof window !== "undefined") {
@@ -51,7 +52,7 @@ export default function Contact() {
             });
 
             // 2. Scroll Animations (Jab user scroll down karega)
-            
+
             // Highlight color fill animation
             gsap.to("#highlight-dc", {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -137,7 +138,7 @@ export default function Contact() {
 
                             {/* Benefits Grid using React Icons */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 font-dm-sans text-white">
-                                <div className="left-element flex items-start">
+                                <div className="left-element flex items-start bg-white/10 p-5 rounded-2xl backdrop-blur-sm">
                                     <div className="shrink-0 bg-red-100 p-3 rounded-lg text-red-600 text-2xl">
                                         <FaArrowTrendUp />
                                     </div>
@@ -146,7 +147,7 @@ export default function Contact() {
                                         <p className="mt-1 text-sm text-gray-200">Industry-leading ROI for partners.</p>
                                     </div>
                                 </div>
-                                <div className="left-element flex items-start">
+                                <div className="left-element flex items-start bg-white/10 p-5 rounded-2xl backdrop-blur-sm">
                                     <div className="shrink-0 bg-green-100 p-3 rounded-lg text-green-600 text-2xl">
                                         <FaTruckFast />
                                     </div>
@@ -155,7 +156,7 @@ export default function Contact() {
                                         <p className="mt-1 text-sm text-gray-200">Uninterrupted supply chain.</p>
                                     </div>
                                 </div>
-                                <div className="left-element flex items-start">
+                                <div className="left-element flex items-start bg-white/10 p-5 rounded-2xl backdrop-blur-sm">
                                     <div className="shrink-0 bg-blue-100 p-3 rounded-lg text-blue-600 text-2xl">
                                         <FaBullhorn />
                                     </div>
@@ -164,7 +165,7 @@ export default function Contact() {
                                         <p className="mt-1 text-sm text-gray-200">Banners, boards & promo material.</p>
                                     </div>
                                 </div>
-                                <div className="left-element flex items-start">
+                                <div className="left-element flex items-start bg-white/10 p-5 rounded-2xl backdrop-blur-sm">
                                     <div className="shrink-0 bg-orange-100 p-3 rounded-lg text-orange-600 text-2xl">
                                         <FaHeadset />
                                     </div>
@@ -181,78 +182,90 @@ export default function Contact() {
                             ref={rightSideRef}
                             className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-200 font-dm-sans relative z-10"
                         >
-                            <h3 className="md:text-4xl text-2xl font-bold text-black mb-6 font-bayon text-center tracking-wide">Distributor Inquiry</h3>
+                            <h3 className="md:text-4xl text-2xl font-bold text-black mb-6 font-bayon text-center tracking-wide uppercase">Apply for Dealership</h3>
 
-                            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name *</label>
-                                    <input type="text" id="name" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border outline-none transition-all bg-white" placeholder="Enter your name" />
+                                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Full Name *</label>
+                                    <input type="text" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border outline-none transition-all bg-white" placeholder="Enter owner name" />
                                 </div>
 
-                                <div>
-                                    <label htmlFor="mobile" className="block text-sm font-medium text-gray-700">WhatsApp / Mobile Number *</label>
-                                    <input type="tel" id="mobile" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border outline-none transition-all bg-white" placeholder="+91 00000 00000" />
-                                </div>
-
-                                <div>
-                                    <label htmlFor="business" className="block text-sm font-medium text-gray-700">Current Business / Shop Name</label>
-                                    <input type="text" id="business" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border outline-none transition-all bg-white" placeholder="e.g. Sharma Traders (Optional)" />
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label htmlFor="city" className="block text-sm font-medium text-gray-700">City / District *</label>
-                                        <input type="text" id="city" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border outline-none transition-all bg-white" placeholder="Your target area" />
+                                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">WhatsApp Number *</label>
+                                        <input type="tel" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border outline-none transition-all bg-white" placeholder="+91" />
                                     </div>
                                     <div>
-                                        <label htmlFor="investment" className="block text-sm font-medium text-gray-700">Investment Capacity</label>
-                                        <select id="investment" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border bg-white outline-none transition-all">
-                                            <option value="">Select an option</option>
-                                            <option value="1L-3L">₹1 Lakh - ₹3 Lakh</option>
-                                            <option value="3L-5L">₹3 Lakh - ₹5 Lakh</option>
-                                            <option value="5L+">Above ₹5 Lakh</option>
+                                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">City / District *</label>
+                                        <input type="text" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border outline-none transition-all bg-white" placeholder="Target area" />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Business / Firm Name</label>
+                                    <input type="text" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border outline-none transition-all bg-white" placeholder="Current shop name (if any)" />
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Investment Plan *</label>
+                                        <select required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border bg-white outline-none">
+                                            <option value="">Choose Budget</option>
+                                            <option value="2-5L">₹2 Lakh - ₹5 Lakh</option>
+                                            <option value="5-10L">₹5 Lakh - ₹10 Lakh</option>
+                                            <option value="10L+">Above ₹10 Lakh</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Cold Storage? *</label>
+                                        <select required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#FC3327] focus:ring-[#FC3327] p-3 border bg-white outline-none">
+                                            <option value="yes">Already Have</option>
+                                            <option value="planning">Planning to buy</option>
+                                            <option value="no">Need Help</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full font-bayon flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-lg text-xl font-medium text-white bg-[#961E17] hover:bg-[#e52e23] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FC3327] transition-all transform hover:-translate-y-1 tracking-wider"
+                                    className="mt-10 w-full font-bayon flex justify-center py-4 px-4 border border-transparent rounded-xl shadow-lg text-2xl font-medium text-white bg-gradient-to-r from-[#961E17] to-[#FC3327] hover:scale-[1.02] transition-all transform tracking-widest uppercase"
                                 >
-                                    Submit
+                                    Get a Callback
                                 </button>
+                                <p className="text-[10px] text-center text-gray-400 mt-2">Our telecaller will contact you within 24-48 hours.</p>
                             </form>
                         </div>
+
 
                     </div>
 
                     {/* ================= BOTTOM CONTACT INFO (Animated on Scroll) ================= */}
                     <div ref={bottomContactRef} className="mt-16 pt-10 border-t border-white/20 font-dm-sans text-center relative z-10">
-                        <h3 className="bottom-info-item font-semibold mb-6 font-bayon 2xl:text-7xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-white">Factory Head Office</h3>
-                        
+                        <h3 className="bottom-info-item font-semibold mb-6 font-bayon 2xl:text-7xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl text-white">Factory Head Office contact</h3>
+
                         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-lg">
-                            <div className="bottom-info-item flex items-center bg-black/30 px-6 py-3 rounded-full backdrop-blur-sm">
-                                <FaLocationDot className="text-[#FC3327] mr-3 text-2xl" />
-                                <p className="text-white">Double Cool Ice Cream Factory</p>
-                            </div>
-                            <div className="bottom-info-item flex items-center bg-black/30 px-6 py-3 rounded-full backdrop-blur-sm">
-                                <FaPhone className="text-[#4CC91F] mr-3 text-xl" />
-                                <p className="text-white">+91-XXXXXXXXXX</p>
-                            </div>
-                            <div className="bottom-info-item flex items-center bg-black/30 px-6 py-3 rounded-full backdrop-blur-sm">
-                                <MdEmail className="text-blue-400 mr-3 text-2xl" />
-                                <p className="text-white">partner@doublecool.com</p>
-                            </div>
+                            <Link href="https://maps.app.goo.gl/3Y81NjCksnHPmUKA7" target="_blank" className="bottom-info-item flex text-sm items-center bg-black/30 px-6 py-3 rounded-full backdrop-blur-sm">
+                                <FaLocationDot className="text-[#FC3327] mr-3" />
+                                <p className="text-white">F838+JFR, Khasjangal Cantonment, West Bengal 721102</p>
+                            </Link>
+                            <Link href="tel:+917076782185" className="bottom-info-item flex text-sm items-center bg-black/30 px-6 py-3 rounded-full backdrop-blur-sm">
+                                <FaPhone className="text-[#4CC91F] mr-3" />
+                                <p className="text-white">+91-7076782185</p>
+                            </Link>
+                            <Link href="mailto:siromonifoodproductspvtltd@gmail.com" className="bottom-info-item flex text-sm items-center bg-black/30 px-6 py-3 rounded-full backdrop-blur-sm">
+                                <MdEmail className="text-blue-400 mr-3" />
+                                <p className="text-white">siromonifoodproductspvtltd@gmail.com</p>
+                            </Link>
                         </div>
                     </div>
 
                 </div>
-            </div>
+            </div >
 
             {/* ================= BOTTOM MAP SECTION ================= */}
-            <div className="map-container w-full relative z-10 bg-gray-100">
+            < div className="map-container w-full relative z-10 bg-gray-100" >
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113426.65476654271!2d88.243542!3d22.562627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a3d3c8c83b%3A0x861c8ed3238de5fb!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.332845045696!2d87.31357187434945!3d22.454123137304094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d5b58c9f33c19%3A0x2d22b0141f67afe6!2sDouble%20cool%20ice%20cream!5e0!3m2!1sen!2sin!4v1774441644358!5m2!1sen!2sin"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}
@@ -261,7 +274,7 @@ export default function Contact() {
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Factory Location Map"
                 ></iframe>
-            </div>
+            </div >
         </>
     )
 }

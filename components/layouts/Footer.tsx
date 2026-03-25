@@ -75,12 +75,12 @@ const Footer = () => {
                                         <span className="text-white text-center font-dm-sans text-lg font-light">+91 7076782185</span>
                                     </Link>
                                 </li>
-                                {/* <li>
+                                <li>
                                     <Link href="mailto:[EMAIL_ADDRESS]" className="flex items-center gap-2">
                                         <Image src="/images/footer/Mailbox.png" alt="mail icon" width={50} height={50} className="w-auto h-11" />
-                                        <span className="text-white text-center font-dm-sans text-lg font-light">demo@email.com</span>
+                                        <span className="text-white text-center font-dm-sans text-lg font-light">siromonifoodproductspvtltd@gmail.com</span>
                                     </Link>
-                                </li> */}
+                                </li>
                                 <li>
                                     <Link href="#" className="flex items-start gap-2 w-[300px] mt-3">
                                         <Image src="/images/footer/Location.png" alt="location icon" width={50} height={50} className="w-auto h-11" />

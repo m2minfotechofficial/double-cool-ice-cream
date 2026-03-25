@@ -6,6 +6,8 @@ import logo from "../../public/images/logo/loader-logo.png";
 import addonImg from "../../public/images/footer/icecream.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { FaPhone, FaWhatsapp } from "react-icons/fa6";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,71 +29,83 @@ const Header = () => {
         }
     }, { scope: container, dependencies: [isOpen] });
 
+    const phoneNumber = "917076782185";
+    const message = encodeURIComponent("Hello Double Cool Team, I am interested in becoming a distributor. Please share the dealership process.\n\nName:\nLocation:");
 
     return (
-        <header ref={container} className="font-dm-sans max-w-7xl mx-auto fixed top-0 left-0 right-0 z-40">
-            <nav className="flex justify-between items-center md:p-4 p-2">
-                {/* Logo */}
-                <Link href="/" className="logo">
-                    <Image src={logo} alt="logo" width={300} height={300} className="w-auto md:h-30 h-20 -rotate-20 drop-shadow-xl md:p-0 p-2" priority />
-                </Link>
+        <>
+            <header ref={container} className="font-dm-sans max-w-7xl mx-auto fixed top-0 left-0 right-0 z-40">
+                <nav className="flex justify-between items-center md:p-4 p-2">
+                    {/* Logo */}
+                    <Link href="/" className="logo">
+                        <Image src={logo} alt="logo" width={300} height={300} className="w-auto md:h-30 h-20 -rotate-20 drop-shadow-xl md:p-0 p-2" priority />
+                    </Link>
 
-                {/* Background Mask (Overlay) */}
-                <div
-                    ref={maskRef}
-                    onClick={() => setIsOpen(false)}
-                    className="mask bg-[#0000007a] fixed inset-0 backdrop-blur-md pointer-events-none h-screen w-full translate-x-full"
-                ></div>
-
-                {/* Right Side Sliding Menu */}
-                <div
-                    ref={menuRef}
-                    // style={{ clipPath: `polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)` }}
-                    className="[clip-path:polygon(0%_0%,_100%_0%,_100%_100%,_0%_100%)] 
-        lg:[clip-path:polygon(15%_0%,_100%_0%,_100%_100%,_0%_100%)] nav-menus bg-gray-300 fixed w-full lg:w-1/2 h-screen right-0 top-0 p-10 flex translate-x-full z-50"
-                >
-                    <ul className="nav-links flex flex-col font-bayon items-start h-full justify-center p-5 text-4xl md:text-6xl gap-5 lg:-skew-x-10 ms-10">
-                        {["Home", "About", "Products", "Quality", "Gallery", "Contact"].map((item, index) => (
-                            <li key={item}>
-                                <Link
-                                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                                    className={`text-[#892D1C] lg:skew-x-10 font-bold hover:scale-105 hover:text-[#FC3327] inline-block transition-all duration-300 ms-${20 - (index * 4)}`}
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {item}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-
-                    <Image
-                        src={addonImg}
-                        width={400}
-                        height={400}
-                        alt="Ice Cream"
-                        className="hidden md:block absolute bottom-10 right-10 w-64 h-auto rotate-12 opacity-80"
-                    />
-
-                    {/* Close Button */}
-                    <button
+                    {/* Background Mask (Overlay) */}
+                    <div
+                        ref={maskRef}
                         onClick={() => setIsOpen(false)}
-                        className="border text-black px-4 py-2 absolute right-10 top-10 rounded-full border-dashed cursor-pointer hover:bg-white hover:text-black transition-colors"
-                    >
-                        ✕ Close
-                    </button>
-                </div>
+                        className="mask bg-[#0000007a] fixed inset-0 backdrop-blur-md pointer-events-none h-screen w-full translate-x-full"
+                    ></div>
 
-                {/* Hamburger Toggle Button */}
-                <button
-                    onClick={() => setIsOpen(true)}
-                    type="button"
-                    className="bg-[#ffffffb6] relative z-30 md:me-5 me-4 transition-all duration-300 hover:text-[#FC3327] hover:scale-110 py-3 px-3 inline-block rounded-xl border border-dashed border-black cursor-pointer active:scale-95"
-                >
-                    <span className="block w-6 h-[2px] bg-black mb-2"></span>
-                    <span className="block w-4 h-[2px] bg-black"></span>
-                </button>
-            </nav>
-        </header>
+                    {/* Right Side Sliding Menu */}
+                    <div
+                        ref={menuRef}
+                        // style={{ clipPath: `polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)` }}
+                        className="[clip-path:polygon(0%_0%,_100%_0%,_100%_100%,_0%_100%)] 
+        lg:[clip-path:polygon(15%_0%,_100%_0%,_100%_100%,_0%_100%)] nav-menus bg-gray-300 fixed w-full lg:w-1/2 h-screen right-0 top-0 p-10 flex translate-x-full z-50"
+                    >
+                        <ul className="nav-links flex flex-col font-bayon items-start h-full justify-center p-5 text-4xl md:text-6xl gap-5 lg:-skew-x-10 ms-10">
+                            {["Home", "About", "Products", "Quality", "Gallery", "Contact"].map((item, index) => (
+                                <li key={item}>
+                                    <Link
+                                        href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                                        className={`text-[#892D1C] lg:skew-x-10 font-bold hover:scale-105 hover:text-[#FC3327] inline-block transition-all duration-300 ms-${20 - (index * 4)}`}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {item}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <Image
+                            src={addonImg}
+                            width={400}
+                            height={400}
+                            alt="Ice Cream"
+                            className="hidden md:block absolute bottom-10 right-10 w-64 h-auto rotate-12 opacity-80"
+                        />
+
+                        {/* Close Button */}
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            className="border text-black px-4 py-2 absolute right-10 top-10 rounded-full border-dashed cursor-pointer hover:bg-white hover:text-black transition-colors"
+                        >
+                            ✕ Close
+                        </button>
+                    </div>
+
+                    {/* Hamburger Toggle Button */}
+                    <button
+                        onClick={() => setIsOpen(true)}
+                        type="button"
+                        className="bg-[#ffffffb6] relative z-30 md:me-5 me-4 transition-all duration-300 hover:text-[#FC3327] hover:scale-110 py-3 px-3 inline-block rounded-xl border border-dashed border-black cursor-pointer active:scale-95"
+                    >
+                        <span className="block w-6 h-[2px] bg-black mb-2"></span>
+                        <span className="block w-4 h-[2px] bg-black"></span>
+                    </button>
+                </nav>
+            </header>
+            <div className="float-call-to-action fixed md:top-1/2 bottom-5 md:-translate-y-1/2 md:left-2 right-2 z-50 flex flex-col gap-2">
+                <Link href="tel:+917076782185" className="md:text-2xl text-sm md:p-3 p-2 inline-block float-call-to-action-item bg-black border-2 border-white rounded-full animate-pulse hover:animate-none">
+                    <FaPhone className="text-red-500" />
+                </Link>
+                <Link href={`https://wa.me/${phoneNumber}?text=${message}`} target="_blank" rel="noopener noreferrer" className="md:text-2xl text-sm md:p-3 p-2 inline-block float-call-to-action-item bg-black border-2 border-white rounded-full animate-pulse hover:animate-none">
+                    <FaWhatsapp className="text-[#4CC91F]" />
+                </Link>
+            </div>
+        </>
     );
 };
 
