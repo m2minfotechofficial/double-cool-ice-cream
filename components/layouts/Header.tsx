@@ -97,14 +97,14 @@ const Header = () => {
                     </button>
                 </nav>
             </header>
-            <div className="float-call-to-action fixed md:top-1/2 bottom-5 md:-translate-y-1/2 md:left-2 right-2 z-50 flex flex-col gap-2">
+            {/* <div className="float-call-to-action fixed md:top-1/2 bottom-5 md:-translate-y-1/2 left-3 z-50 flex flex-col gap-2 w-[55px]">
                 <Link href="tel:+917076782185" className="md:text-2xl text-sm md:p-3 p-2 inline-block float-call-to-action-item bg-black border-2 border-white rounded-full animate-pulse hover:animate-none">
                     <FaPhone className="text-red-500" />
                 </Link>
                 <Link href={`https://wa.me/${phoneNumber}?text=${message}`} target="_blank" rel="noopener noreferrer" className="md:text-2xl text-sm md:p-3 p-2 inline-block float-call-to-action-item bg-black border-2 border-white rounded-full animate-pulse hover:animate-none">
                     <FaWhatsapp className="text-[#4CC91F]" />
                 </Link>
-            </div>
+            </div> */}
         </>
     );
 };
