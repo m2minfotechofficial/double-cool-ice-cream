@@ -18,7 +18,7 @@ const HeroSection = () => {
 
     useGSAP(() => {
 
-        const tl = gsap.timeline({ delay: 1 })
+        const tl = gsap.timeline({ delay: 2 })
 
         const split = new SplitText(heroTitle.current, {
             type: "words, chars"
