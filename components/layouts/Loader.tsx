@@ -45,7 +45,7 @@ const Loader = () => {
     return (
         <div className='loader h-screen w-full fixed top-0 left-0 z-50'>
             <div className="h-screen flex items-center justify-center logo-container absolute inset-0 z-20">
-                <Image src="/images/logo/loader-logo1.png" style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }} alt="shop now" width={500} height={500} id="logo" className="opacity-0 w-auto md:h-40 h-20 relative z-10 top-5" />
+                <Image src="/images/logo/loader-logo1.png" style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }} alt="shop now" width={500} height={500} id="logo" className="opacity-0 w-auto h-40 relative z-10 top-5" />
                 {/* <Image src="/images/logo/loader-icon-bg1.png" alt="shop now" width={500} height={500} id="logo-bg" className="opacity-0 scale-0 absolute z-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-90" /> */}
             </div>
             <div className="flex h-screen w-full absolute inset-0 z-10 loader-shutter">
