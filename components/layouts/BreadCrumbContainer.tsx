@@ -1,5 +1,5 @@
 import Link from "next/link";
-import breadcrumbBg from "../../public/images/hero/hero-bg.jpg";
+import breadcrumbBg from "../../public/images/hero/hero-bg-3.png";
 import { LuArrowLeftRight } from "react-icons/lu";
 
 const BreadCrumbContainer = ({ breadcrumbLink }: { breadcrumbLink: string }) => {

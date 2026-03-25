@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/images/logo/logo-double-cool.png";
+import logo from "../../public/images/logo/loader-logo.png";
 import addonImg from "../../public/images/footer/icecream.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -33,7 +33,7 @@ const Header = () => {
             <nav className="flex justify-between items-center md:p-4 p-2">
                 {/* Logo */}
                 <Link href="/" className="logo">
-                    <Image src={logo} alt="logo" width={200} height={200} className="w-auto md:h-25 h-20 -rotate-20 drop-shadow-xl" priority />
+                    <Image src={logo} alt="logo" width={300} height={300} className="w-auto md:h-30 h-20 -rotate-20 drop-shadow-xl md:p-0 p-2" priority />
                 </Link>
 
                 {/* Background Mask (Overlay) */}
