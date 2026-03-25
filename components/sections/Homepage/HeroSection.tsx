@@ -68,13 +68,14 @@ const HeroSection = () => {
         >
 
             <div className="absolute inset-0 w-full h-full -z-10">
-                <Image
+                {/* <Image
                     src="/images/hero/hero-bg-3.png"
                     alt="Hero Background"
                     fill
                     priority
                     className="object-cover"
-                />
+                /> */}
+                <video src="/videos/hero-bg.mp4" autoPlay playsInline muted className="object-cover w-full h-full" />
             </div>
 
             <div
