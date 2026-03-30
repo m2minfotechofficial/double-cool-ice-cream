@@ -72,19 +72,19 @@ const Footer = () => {
                                 <li>
                                     <Link href="tel:+917076782185" className="flex items-center gap-2">
                                         <Image src="/images/footer/Call.png" alt="call icon" width={50} height={50} className="w-auto h-10" />
-                                        <span className="text-white text-center font-dm-sans text-lg font-light">+91 7076782185</span>
+                                        <span className="text-white text-center font-dm-sans md:text-lg text-sm font-light">+91 7076782185</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="mailto:[EMAIL_ADDRESS]" className="flex items-center gap-2">
+                                    <Link href="mailto:siromonifoodproductspvtltd@gmail.com" className="flex items-center gap-2">
                                         <Image src="/images/footer/Mailbox.png" alt="mail icon" width={50} height={50} className="w-auto h-11" />
-                                        <span className="text-white text-center font-dm-sans text-lg font-light">siromonifoodproductspvtltd@gmail.com</span>
+                                        <span className="text-white text-center font-dm-sans md:text-lg text-sm font-light">siromonifoodproductspvtltd@gmail.com</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="#" className="flex items-start gap-2 w-[300px] mt-3">
                                         <Image src="/images/footer/Location.png" alt="location icon" width={50} height={50} className="w-auto h-11" />
-                                        <span className="text-white font-dm-sans text-lg font-light">Vill. : Khasjungle, P.O. - Abas, P.S. - Kotwali,
+                                        <span className="text-white font-dm-sans md:text-lg text-sm font-light">Vill. : Khasjungle, P.O. - Abas, P.S. - Kotwali,
 
                                             Paschim Medinipur, Pin - 721102,
 
