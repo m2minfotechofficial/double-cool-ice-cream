@@ -66,7 +66,7 @@ const Footer = () => {
                             alt="Double Cool Logo"
                             className="w-[65%] h-auto drop-shadow-xl mx-auto"
                         />
-                        <h2 className="text-white text-center font-bayon text-xl my-3">SIROMONI FOOD PRODUCTS PVT. LTD.</h2>
+                        <h2 className="text-white text-center font-bayon md:text-xl text-sm my-3">SIROMONI FOOD PRODUCTS PVT. LTD.</h2>
                         <div className="contact-actions flex justify-center">
                             <ul>
                                 <li>
