@@ -61,7 +61,7 @@ export default function TransitionProviders({ children }: TransitionProps): Reac
                         width={500}
                         height={500}
                         id="transition-logo"
-                        className="opacity-0 w-auto h-40 relative"
+                        className="opacity-0 w-auto md:h-50 h-30 relative"
                         style={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" }}
                     />
                 </div>

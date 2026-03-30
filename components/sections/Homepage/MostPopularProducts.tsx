@@ -188,7 +188,7 @@ const MostPopularProducts = () => {
                 <div className="flex sm:flex-row flex-col items-center lg:gap-40 gap-20 lg:py-32 py-10">
                     {/* 3. Map over the new data array */}
                     {productsData.map((product) => (
-                        <div key={product.id} className="popular-product-card relative group lg:w-[600px] w-[85vw] lg:h-[500px] h-[200px] shrink-0">
+                        <div key={product.id} className="popular-product-card relative group lg:w-[600px] w-[85vw] lg:h-[500px] h-[200px] shrink-0 md:mb-0 mb-10">
                             <Image
                                 width={700}
                                 height={500}

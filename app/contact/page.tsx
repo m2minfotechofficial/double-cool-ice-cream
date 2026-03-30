@@ -131,10 +131,10 @@ export default function Contact() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                     {/* Split Layout */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div className="flex md:flex-row flex-col-reverse items-center gap-16">
 
                         {/* ================= LEFT SIDE: Trust & Info ================= */}
-                        <div className="space-y-8">
+                        <div className="space-y-8 flex-1">
                             <div className="left-element">
                                 <h2 id="distributorship-head" className="font-bayon 2xl:text-8xl xl:text-8xl md:text-5xl text-4xl text-white tracking-tight text-center lg:text-left">
                                     <span className="span-1 block">
@@ -199,7 +199,7 @@ export default function Contact() {
                         {/* ================= RIGHT SIDE: The Form ================= */}
                         <div
                             ref={rightSideRef}
-                            className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-200 font-dm-sans relative z-10"
+                            className="bg-white/95 flex-1 backdrop-blur-sm rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-200 font-dm-sans relative z-10"
                         >
                             <h3 className="md:text-4xl text-2xl font-bold text-black mb-6 font-bayon text-center tracking-wide uppercase">Apply for Dealership</h3>
 

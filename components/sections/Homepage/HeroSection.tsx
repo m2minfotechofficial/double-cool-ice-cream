@@ -67,7 +67,7 @@ const HeroSection = () => {
             className="py-30 flex justify-center items-center relative min-h-screen"
         >
 
-            <div className="absolute inset-0 w-full h-full -z-10">
+            <div className="absolute inset-0 w-full h-full -z-10 bg-[#FFF9FC]">
                 {/* <Image
                     src="/images/hero/hero-bg-3.png"
                     alt="Hero Background"
@@ -75,7 +75,7 @@ const HeroSection = () => {
                     priority
                     className="object-cover"
                 /> */}
-                <video src="/videos/hero-bg.mp4" autoPlay playsInline muted className="object-cover w-full h-full" />
+                <video src="/videos/hero-bg.mp4" autoPlay playsInline muted className="object-cover w-full h-full md:object-center object-[-200px_0px]" />
             </div>
 
             <div
@@ -106,7 +106,7 @@ const HeroSection = () => {
                 </p>
 
                 <Link
-                    href="/shop"
+                    href="/products"
                     className="inline-flex items-center font-bold text-white 2xl:text-2xl xl:text-2xl md:text-lg text-sm rounded-2xl hover:shadow-[5px_5px_0px_rgba(0,0,0)] hover:scale-105 transition-all duration-300 bg-[#892D1C] ps-2 pe-5 py-2.5 mt-10 font-baloo2"
                 >
 
